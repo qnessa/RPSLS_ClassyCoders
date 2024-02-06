@@ -32,7 +32,31 @@
         <button class="my-button" onclick="handleButtonClick()">
         <i class="fa-solid fa-hand-lizard"></i></button>
     </div>
-
+    <div class="chosen-main icone flx-row hidden">
+        <div class="chosen icon flx-column">
+            <p id ="player-turn">PLAYER</p>
+            <div class="player-turn"></div>
+        </div>
+        <div class="chosen icon flx-column">
+            <p id="player-choice"></p>
+            <div class="player-choice"></div>
+        </div>
+        <div class="chosen icon flx-column">
+            <p id="computer-turn">COMPUTER</p>
+            <div class="computer-choice"></div>
+        </div>
+        <div class="result">
+            <div class="display-result">WINNER</div>
+        <!-- Add a line break to move the button to the next line -->
+        <br>
+            <button>RESET</button>     
+        </div>
+    <div class="score flx-column">
+        <div class="score-name">Score</div>
+        <div class="score-number">0</div>
+    </div>
+</div> 
+<div>
 
     <script src="script.js"></script>
 </body>
