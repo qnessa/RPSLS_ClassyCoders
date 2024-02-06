@@ -7,9 +7,33 @@
     <title>RPSLS</title>
 </head>
 <body>
-    
+    <label for="playerName">Enter Player Name:</label>
+    <input type="text" id="playerName">
+    <button id="submitButton">Play</button>
 
-
-    <script src="script.js"></script>
+<div class="game">
+    <ul>
+        <div class="player-turn" id="player-rock"></div>
+        <div class="player-turn" id="player-paper"></div>
+        <div class="player-turn" id="player-scissors"></div>
+        <div class="player-turn" id="player-lizard"></div>
+        <div class="player-turn" id="player-spock"></div>
+    </ul>
+    <ul> 
+        <div class="icons player-choice" id="rock">ROCK</div>
+        <div class="icons player-choice" id="paper">PAPER</div>
+        <div class="icons player-choice" id="scissors">SCISSORS</div>
+        <div class="icons player-choice" id="lizard">LIZARD</div>
+        <div class="icons player-choice"id="spock">SPOCK</div>
+    </ul>
+    <ul>
+        <div class="computer-turn" id="computer-rock"></div>
+        <div class="computer-turn" id="computer-paper"></div>
+        <div class="computer-turn" id="computer-scissors"></div>
+        <div class="computer-turn" id="computer-lizard"></div> 
+        <div class="computer-turn" id="computer-spock"></div>
+    </ul>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
