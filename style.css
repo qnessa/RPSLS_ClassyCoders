@@ -88,7 +88,7 @@ div{border: red 1px solid;}
 
 .player-choice{
     height: 50vh;
-    width: 60px;
+    width: 25vw;
     margin: auto;
 }
 .player-chosen {
@@ -103,7 +103,7 @@ div{border: red 1px solid;}
 }
 .choice-button{
     height: 10vh;
-    width: 60px;
+    width: 25vw;
     font-size: 2em;
 }
 /* Relative positions so can slide via JS*/
@@ -130,14 +130,8 @@ p#player-turn-text, p#computer-turn{
 
 /*player input stylers*/
 #player-input-div{
-    width: 260px;
+    /* width: 260px; */
     
-}
-
-.btn-primary {
-    color: white;
-background-color: black;
-border-color: black;
 }
 
 
