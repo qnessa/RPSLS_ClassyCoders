@@ -27,41 +27,47 @@
     <!-- player-choice-->
     <!--hide until needed to play-->
     <div class="game-container flx-column align-center">
-    <div class="player-choice"> 
-        <button class="my-button" id="playerChoice-rock" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand-back-fist"></i></button>
-        <button class="my-button" id="playerChoice-paper" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand"></i></button>
-        <button class="my-button" id="playerChoice-scissors" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand-scissors"></i></button>
-        <button class="my-button" id="playerChoice-lizard" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand-lizard"></i></button>
-        <button class="my-button" id="playerChoice-spock" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand-spock"></i></button>
-    </div>
-    <div class="chosen-main icon flx-row hidden">
-        <div class="chosen icon flx-column">
-            <p id ="player-turn">PLAYER</p>
+        <!--Player choice display area-->
+
+        <div class="chosen-main icon flx-row hidden">
+        <div class="player-chosen icon flx-column">
+            <p id ="player-turn align-center" class="text-center">PLAYER</p>
             <div class="player-turn"></div>
         </div>
-        <div class="chosen icon flx-column">
-            <p id="player-choice"></p>
-            <div class="player-choice"></div>
+        <div class="player-choice"> 
+             <button class="choice-button" id="playerChoice-rock" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand-back-fist"></i></button>
+            <button class="choice-button" id="playerChoice-paper" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand"></i></button>
+            <button class="choice-button" id="playerChoice-scissors" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand-scissors"></i></button>
+            <button class="choice-button" id="playerChoice-lizard" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand-lizard"></i></button>
+            <button class="choice-button" id="playerChoice-spock" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand-spock"></i></button>
         </div>
-        <div class="chosen icon flx-column">
-            <p id="computer-turn">COMPUTER</p>
+    
+         <!--computer choice display area-->
+        <div class="computer-chosen icon flx-column">
+            <p id="computer-turn" class="text-center">COMPUTER</p>
             <div class="computer-choice"></div>
         </div>
-        <div class="result">
-            <div class="display-result">WINNER</div>
-        <!-- Add a line break to move the button to the next line -->
-        <br>
-            <button>RESET</button>     
-        </div>
-    <div class="score flx-column">
-        <div class="score-name">Score</div>
-        <div class="score-number">0</div>
+        
     </div>
+    <div class="result">
+        <div class="display-result" class="text-center">WINNER</div>
+    <!-- Add a line break to move the button to the next line -->
+    <br>
+        <button id="play">RESET</button>     
+    </div>
+    <div class="score flx-column">
+    <div class="score-name text-center" >Score</div>
+    <div class="score-number flx-row">
+<div class="score flx-row"><p>Won: </p><p id="score-won">0</p></div>
+<div class="score flx-row"><p>Drew: </p><p id="score-drew">0</p></div>
+<div class="score flx-row"><p>Lost: </p><p id="score-lost">0</p></div>
+    </div>
+
 </div>
 <!-- hide after use -->
 <div id = "player-input-div">

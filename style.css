@@ -1,37 +1,23 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+/* clear defaults*/
 * {box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
-
+/*Element Styles*/
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
 }
-.main-container{
-    height: 100vh;
-}
-div{
-    border: red 1px solid;
-}
-.align-center{
-    align-items: center;
-    justify-content: center;
-}
+/*For visibility, remove later*/
+div{border: red 1px solid;}
 
-.player-choice{
-    margin: auto;
-}
-.my-button{
-    height: 10vh;
-    width: 18vw;
-    font-size: 2em;
-}
+/* Utility Class Styling*/
 .flx-column {
     display: flex;
     flex-direction: column;
@@ -40,16 +26,71 @@ div{
     display: flex;
     flex-direction: row;
 }
+.align-center{
+    align-items: center;
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+
+/*Main Container and Title*/
+.main-container{
+    height: 100vh;
+}
+.title-block{
+    
+    height: 10vh;
+    vertical-align: middle;
+}
+.title-block h1 {
+    margin-top: 20px;
+}
+
+/*Gamer area Styles*/
+
+.player-choice{
+    height: 50vh;
+    width: 46px;
+    margin: auto;
+}
+.player-chosen {
+    height: 50vh;
+width: 100px;
+}
+.computer-chosen{
+    height: 50vh;
+    width: 100px;
+}
+.choice-button{
+    height: 10vh;
+    width: 46px;
+    font-size: 2em;
+}
+/*Results and score area*/
+.score {
+    width: 260px;
+}
 
 /*rules modal*/
 .modal-hide{
     display: none;
+    height: 100vh;
+    width: 100vh;
+    position: absolute;
+    left:0;
+    top: 0;
 }
+/*Media Queries*/
 
+/*Smallest screens*/
 @media screen and (max-width:480px) {
     h1{
         font-size: .9em;
-        letter-spacing: .1px;;
+        letter-spacing: .1px;
     }
-
-}
+    .player-choice{
+            margin: auto;
+            flex-direction: column;
+        }
+    }
