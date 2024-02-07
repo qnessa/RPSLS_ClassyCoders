@@ -50,15 +50,15 @@ div{border: red 1px solid;}
     margin-top: 20px;
 }
 
-/*player input stylers*/
-#player-input-div{
-    width: 260px;
-}
+
 #play-game {
     margin: auto;
     }
 
 /*Gamer area Styles*/
+.game-container {
+    display: none;
+}
 
 .player-choice{
     height: 50vh;
@@ -90,6 +90,11 @@ div{border: red 1px solid;}
     position: absolute;
     top: 0px;
     width: 100%;
+}
+/*player input stylers*/
+#player-input-div{
+    width: 260px;
+    display: block;
 }
 /*Results and score area*/
 
