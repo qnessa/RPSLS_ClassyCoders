@@ -66,10 +66,12 @@ div{border: red 1px solid;}
     margin: auto;
 }
 .player-chosen {
+    position: relative;
     height: 50vh;
-width: 100px;
+    width: 100px;
 }
 .computer-chosen{
+    position: relative;
     height: 50vh;
     width: 100px;
 }
@@ -77,6 +79,17 @@ width: 100px;
     height: 10vh;
     width: 60px;
     font-size: 2em;
+}
+/* Relative positions so can slide via JS*/
+.computer-turn {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.player-turn {
+    position: absolute;
+    top: 0px;
+    width: 100%;
 }
 /*Results and score area*/
 
@@ -86,6 +99,7 @@ width: 100px;
 .win-caret{width: 100px;}
 .score {
     width: 260px;
+    text-align: center;
 }
 
 /*rules modal*/
