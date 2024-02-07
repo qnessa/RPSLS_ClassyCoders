@@ -1,7 +1,10 @@
 let playerName = "Player";
 let playerTurn = '';
 let computerTurn = '';
-scores = [0, 0, 0];
+let randNum = ''
+let scores = [0, 0, 0];
+let result = '';
+let playerWin = ''
 let playerNameElement = document.getElementById('player-turn-text');
 //let clickedPlayButton = document.getElementById('')
 let playerChoiceDiv = document.getElementById('player-choice');
@@ -17,11 +20,21 @@ const rules = {
 //Let the DOM Load
 document.addEventListener('DOMContentLoaded', function() {});
 
-getPlayerName()
-getComputerTurn()
-console.log(playerName);
-console.log(`Computer chose ${computerTurn}`)
 
+//main loop
+let count=0;
+let exit = false;
+while (exit == false) {
+getPlayerName();
+getComputerTurn();
+getResult();
+
+document.getElementById('reset').addEventListener('click', function() {exit=true}) // change back to reload later
+
+count +=1
+if (count == 100); {exit=true}
+logout()
+};
 
 
 //Functions
@@ -34,10 +47,9 @@ function getPlayerName() {
 function getComputerTurn() {
     var turns = ["rock", "paper", "scissors", "lizard", "spock"];
     console.log(turns);
-    var randNum = Math.floor(Math.random() * 5);
-    console.log(randNum);
+    randNum = Math.floor(Math.random() * 5);
     computerTurn = turns[randNum];
-    console.log(computerTurn);
+    
 };
 //get players choice from DOM
 function handleButtonClick(){
@@ -50,10 +62,39 @@ function handleButtonClick(){
             document.getElementById(playerTurn).style.border = "thin solid #00ff00";
             document.getElementById(playerTurn).style.borderRadius = "25px";
             playerTurn = playerTurn.slice(13);
-            //testing remove later
-            console.log(playerTurn + ' clicked.');
+            
 
         });
     }
 })
+}
+function getResult() {
+    if (playerTurn === computerTurn) {
+        scores[1] += 1; // Increment the tie score
+    }
+//Compare choices
+for (let key in rules) {
+    
+function logout(){
+    console.log(playerName);
+    console.log(`Computer chose ${computerTurn}`);
+    console.log(randNum);
+    console.log(computerTurn);
+    console.log(scores)
+}
+
+for (let key in rules) {
+    for (let innerKey in rules[key]) {
+        if (playerTurn === key) {
+            if (computerTurn === rules[key][0]) {console.log(rules[key][0])
+                result = playerWin;
+            console.log(rules[key][0][1])
+            } else if (computerTurn === rules[key][1]) {console.log(rules[key][1])
+                result = playerWin;
+            }
+        }
+    }
+    }
+        console.log(`${key} -> ${innerKey}: ${rules[key][innerKey]}`);
+    }
 }
