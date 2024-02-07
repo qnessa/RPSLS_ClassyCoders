@@ -40,7 +40,7 @@ div{border: red 1px solid;}
     text-align: center;
 }
 .hide-at-start{
-    display: none;
+    /* display: none; */
 }
 /*Main Container and Title*/
 .main-container{
@@ -53,10 +53,6 @@ div{border: red 1px solid;}
 }
 .title-block h1 {
     margin-top: 20px;
-}
-
-#messageplayer {
-    padding-bottom: 5px;
 }
 
 #messageplayer {
@@ -81,7 +77,7 @@ div{border: red 1px solid;}
 
 /*Gamer area Styles*/
 .game-container {
-    display: none;
+    /* display: none; */
 }
 
 .player-choice{
