@@ -148,6 +148,10 @@ border-color: black;
     text-align: center;
 }
 
+#score-lost, #score-won, #score-drew {
+    margin-left: 3px;
+}
+
 /*rules modal*/
 .modal-hide{
     display: none;
