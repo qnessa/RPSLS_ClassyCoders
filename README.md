@@ -1,6 +1,6 @@
 # Project: Rock-Paper-Scissors-Lizard-Spock
 
-## Team: id="classyCoders"
+### Team: id="classyCoders"
 
 ### Tech Stack:
 1. Balsamiq for wireframing
