@@ -47,19 +47,19 @@
                 </div>
                 <div class="player-choice">
                     <button class="choice-button" id="playerChoice-rock" onclick="handleButtonClick()">
-                        <i class="fa-solid fa-hand-back-fist"></i>
+                        <i class="fa-solid fa-hand-back-fist fa-lg"></i>
                     </button>
                     <button class="choice-button" id="playerChoice-paper" onclick="handleButtonClick()">
-                        <i class="fa-solid fa-hand"></i>
+                        <i class="fa-solid fa-hand fa-lg"></i>
                     </button>
                     <button class="choice-button" id="playerChoice-scissors" onclick="handleButtonClick()">
-                        <i class="fa-solid fa-hand-scissors"></i>
+                        <i class="fa-solid fa-hand-scissors fa-lg"></i>
                     </button>
                     <button class="choice-button" id="playerChoice-lizard" onclick="handleButtonClick()">
-                        <i class="fa-solid fa-hand-lizard"></i>
+                        <i class="fa-solid fa-hand-lizard fa-lg"></i>
                     </button>
                     <button class="choice-button" id="playerChoice-spock" onclick="handleButtonClick()">
-                        <i class="fa-solid fa-hand-spock"></i>
+                        <i class="fa-solid fa-hand-spock fa-lg"></i>
                     </button>
                 </div>
 
@@ -99,9 +99,9 @@
         </div>
         <!-- hide after use -->
 
-        <div>
+        <div class="text-center">
             <div id="player-input-div">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#username">
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#username">
                     Play Now
                   </button>
                 <!-- <label for="player-name"></label> -->
@@ -111,7 +111,7 @@
                 <!-- <button class="align-center" id="play-game">Play</button> -->
             </div>
             <div class="buttons"><button class="rules-btn">Rules</button></div>
-            <br />
+            <br>
             <button id="reset">RESET</button>
             <!--Hidden until JS detects click-->
             <div class="modal-hide">
@@ -138,23 +138,23 @@
         </div>
         <div class="modal-body">
             <label for="player-name">
-            <input type="text" class="align-center" id="player-name" placeholder="ENTER YOUR NAME">
+            <input type="text" class="align-center" id="player-name" maxlength="8" placeholder="ENTER YOUR NAME">
 
 
-      <div>
+      <!-- <div>
         <div id="player-input-div">
           <label for="player-name"></label>
-          <input type="text" id="player-name" maxlength="8"  placeholder="ENTER YOUR NAME" />
+          <input type="text" id="player-name" maxlength="8"  placeholder="ENTER YOUR NAME" /> -->
           <!-- Add a line break to move the button to the next line -->
-          <br />
-          <button class="align-center" id="play-game">Play</button>
+          <!-- <br> -->
+          <!-- <button class="align-center" id="play-game">Play</button> -->
 
         </label>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
-          <button type="button" class="btn btn-primary">Let's Go!</button>
+          <button type="button" class="btn btn-primary" id="play-game">Let's Go!</button>
         </div>
       </div>
     </div>
