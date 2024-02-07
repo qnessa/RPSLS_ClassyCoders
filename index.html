@@ -25,7 +25,8 @@
       </div>
     </div>
     <!-- player-choice-->
-    <div class="game-container flx colum">
+    <!--hide until needed to play-->
+    <div class="game-container flx-column align-center">
     <div class="player-choice"> 
         <button class="my-button" id="playerChoice-rock" onclick="handleButtonClick()">
         <i class="fa-solid fa-hand-back-fist"></i></button>
@@ -38,7 +39,7 @@
         <button class="my-button" id="playerChoice-spock" onclick="handleButtonClick()">
         <i class="fa-solid fa-hand-spock"></i></button>
     </div>
-    <div class="chosen-main icone flx-row hidden">
+    <div class="chosen-main icon flx-row hidden">
         <div class="chosen icon flx-column">
             <p id ="player-turn">PLAYER</p>
             <div class="player-turn"></div>
@@ -61,25 +62,29 @@
         <div class="score-name">Score</div>
         <div class="score-number">0</div>
     </div>
-</div> 
-<div><label for="player-name"></label>
-    <input type="text" id="player-name" placeholder="ENTER YOUR NAME TO BEGIN">
+</div>
+<!-- hide after use -->
+<div id = "player-input-div">
+    <label for="player-name"></label>
+    <input type="text" id="player-name" placeholder="ENTER YOUR NAME">
     <!-- Add a line break to move the button to the next line -->
     <br>
     <button id="play-game">Play</button>
 </div>
 <div>
-<button class="rules-btn">Rules
-    <div class="modal-behind"></div>
+<button class="rules-btn">Rules</button>
+<!--Hidden until JS detects click-->
+    <div class="modal-hide">
     <div class="modal">
         <span class="close-img">
         <img src="assets/images/close.image.png" alt="Close Icon" id="close-icon">
         </span>
     <div class="rules-title">Rules</div>
     <div class="rules">
-        <img src="assets/images/rules page(1).png" alt="rules">
+        <img src="../assets/images/rulespage.png" alt="rules">
     </div>
     </div>
+</div>
 </button>
 </div> 
 </div>    
