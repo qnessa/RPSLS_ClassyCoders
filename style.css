@@ -27,13 +27,16 @@ div{border: red 1px solid;}
     flex-direction: row;
 }
 .align-center{
-    align-items: center;
-    justify-content: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .text-center{
     text-align: center;
 }
-
+.hide-at-start{
+    display: none;
+}
 /*Main Container and Title*/
 .main-container{
     height: 100vh;
@@ -47,11 +50,19 @@ div{border: red 1px solid;}
     margin-top: 20px;
 }
 
+/*player input stylers*/
+#player-input-div{
+    width: 260px;
+}
+#play-game {
+    margin: auto;
+    }
+
 /*Gamer area Styles*/
 
 .player-choice{
     height: 50vh;
-    width: 46px;
+    width: 60px;
     margin: auto;
 }
 .player-chosen {
@@ -64,10 +75,15 @@ width: 100px;
 }
 .choice-button{
     height: 10vh;
-    width: 46px;
+    width: 60px;
     font-size: 2em;
 }
 /*Results and score area*/
+
+.result {
+    width: 260px;
+}
+.win-caret{width: 100px;}
 .score {
     width: 260px;
 }

@@ -23,6 +23,7 @@
       <div class="title-block">
         <h1>ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
       </div>
+      <p id="messageplayer" class="text-center text-uppercase" >Welcome to our game</p>
     </div>
     <!-- player-choice-->
     <!--hide until needed to play-->
@@ -54,12 +55,11 @@
         </div>
         
     </div>
-    <div class="result">
+    <div class="result flx-row">
+        <div class="win-caret text-center"id ="player-win"><i class="hide-at-start fa-solid fa-caret-up"></i></div>
         <div class="display-result" class="text-center">WINNER</div>
-    <!-- Add a line break to move the button to the next line -->
-    <br>
-        <button id="play">RESET</button>     
-    </div>
+        <div class="win-caret text-center"id ="player-win"><i class="hide-at-start fa-solid fa-caret-up"></i></div>
+        </div>
     <div class="score flx-column">
     <div class="score-name text-center" >Score</div>
     <div class="score-number flx-row">
@@ -75,10 +75,12 @@
     <input type="text" id="player-name" placeholder="ENTER YOUR NAME">
     <!-- Add a line break to move the button to the next line -->
     <br>
-    <button id="play-game">Play</button>
+    <button class="align-center" id ="play-game">Play</button>
 </div>
 <div>
-<button class="rules-btn">Rules</button>
+<div class="buttons"><button class="rules-btn">Rules</button></div>
+<br>
+        <button id="reset">RESET</button> 
 <!--Hidden until JS detects click-->
     <div class="modal-hide">
     <div class="modal">
