@@ -3,11 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"content="RPSLS_ClassyCoders. Website for game lovers who are looking to play Rock,Paper,Scissors,Lizard,Spock Game."
+    <meta name="keywords"content="Rock-paper-scissors-lizard-spoke-game">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
+    <script src="https://kit.fontawesome.com/5e4aba3606.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>RPSLS</title>
 </head>
 <body>
-    
+<div class="main-container flx-column">
+    <div class="container flx-column">
+    <!-- Title-block -->
+      <div class="title-block">
+        <h1>ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
+      </div>
+    </div>
+    <!-- player-choice-->
+    <div class="game-container flx colum"
+    <div class="player-choice"> 
+        <button class="my-button" onclick="handleButtonClick()">
+        <i class="fa-solid fa-hand-back-fist"></i></button>
+        <button class="my-button" onclick="handleButtonClick()">
+        <i class="fa-solid fa-hand-spock"></i></button>
+        <button class="my-button" onclick="handleButtonClick()">
+        <i class="fa-solid fa-hand"></i></button>
+        <button class="my-button" onclick="handleButtonClick()">
+        <i class="fa-solid fa-hand-scissors"></i></button>
+        <button class="my-button" onclick="handleButtonClick()">
+        <i class="fa-solid fa-hand-lizard"></i></button>
+    </div>
+    <div class="chosen-main icone flx-row hidden">
+        <div class="chosen icon flx-column">
+            <p id ="player-turn">PLAYER</p>
+            <div class="player-turn"></div>
+        </div>
+        <div class="chosen icon flx-column">
+            <p id="player-choice"></p>
+            <div class="player-choice"></div>
+        </div>
+        <div class="chosen icon flx-column">
+            <p id="computer-turn">COMPUTER</p>
+            <div class="computer-choice"></div>
+        </div>
+        <div class="result">
+            <div class="display-result">WINNER</div>
+        <!-- Add a line break to move the button to the next line -->
+        <br>
+            <button>RESET</button>     
+        </div>
+    <div class="score flx-column">
+        <div class="score-name">Score</div>
+        <div class="score-number">0</div>
+    </div>
+</div> 
+<div><label for="player-name"></label>
+    <input type="text" id="player-name" placeholder="ENTER YOUR NAME TO BEGIN">
+    <!-- Add a line break to move the button to the next line -->
+    <br>
+    <button id="play-game">Play</button>
+</div>
+<div>
+<button class="rules-btn">Rules
+    <div class="modal-behind"></div>
+    <div class="modal">
+        <span class="close-img">
+        <img src="assets/images/close.image.png" alt="Close Icon" id="close-icon">
+        </span>
+    <div class="rules-title">Rules</div>
+    <div class="rules">
+        <img src="assets/images/rules page(1).png" alt="rules">
+    </div>
+    </div>
+</button>
+</div> 
+</div>    
+<script src="assets/js/script.js"></script>   
+</div>
+</body>
+</html>
+
 
 
     <script src="script.js"></script>
