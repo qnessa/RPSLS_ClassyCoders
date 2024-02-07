@@ -6,6 +6,10 @@
     margin: 0;
 }
 /*Element Styles*/
+html {
+    margin: 0px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -13,6 +17,7 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    margin: 0px;
 }
 /*For visibility, remove later*/
 div{border: red 1px solid;}
@@ -35,29 +40,47 @@ div{border: red 1px solid;}
     text-align: center;
 }
 .hide-at-start{
-    display: none;
+    /* display: none; */
 }
 /*Main Container and Title*/
 .main-container{
     height: 100vh;
 }
-.title-block{
+.game-title{
     
     height: 10vh;
     vertical-align: middle;
 }
-.title-block h1 {
+.game-title h1 {
     margin-top: 20px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#messageplayer {
+    padding-bottom: 5px;
 }
 
 
 #play-game {
     margin: auto;
+    padding: 2px;
+    border: 1px solid grey;
+    border-radius: 2%;
     }
+
+#player-name {
+    width: 260px;
+    position: relative;
+    text-align: center;
+    align-self: center;
+
+}
 
 /*Gamer area Styles*/
 .game-container {
-  
+    /* display: none; */
+
 }
 
 .player-choice{
@@ -87,15 +110,34 @@ div{border: red 1px solid;}
     width: 100%;
 }
 .player-turn {
-    position: absolute;
+    /* position: absolute; */
+    height: 10vh;
     top: 0px;
     width: 100%;
 }
+
+.computer-choice {
+    height: 10vh;
+}
+
+p#player-turn-text, p#computer-turn{
+    margin: auto;
+    line-height: 10vh;
+}
+
 /*player input stylers*/
 #player-input-div{
     width: 260px;
-    display: block;
+    
 }
+
+.btn-primary {
+    color: white;
+background-color: black;
+border-color: black;
+}
+
+
 /*Results and score area*/
 
 .result {
@@ -105,6 +147,10 @@ div{border: red 1px solid;}
 .score {
     width: 260px;
     text-align: center;
+}
+
+#score-lost, #score-won, #score-drew {
+    margin-left: 3px;
 }
 
 /*rules modal*/
