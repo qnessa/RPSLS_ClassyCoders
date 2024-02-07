@@ -59,10 +59,11 @@ div{border: red 1px solid;}
     padding-bottom: 5px;
 }
 
-/*player input stylers*/
-#player-input-div{
-    width: 260px;
+#messageplayer {
+    padding-bottom: 5px;
 }
+
+
 #play-game {
     margin: auto;
     padding: 2px;
@@ -79,6 +80,9 @@ div{border: red 1px solid;}
 }
 
 /*Gamer area Styles*/
+.game-container {
+    display: none;
+}
 
 .player-choice{
     height: 50vh;
@@ -117,6 +121,11 @@ div{border: red 1px solid;}
     height: 10vh;
 }
 
+/*player input stylers*/
+#player-input-div{
+    width: 260px;
+    display: block;
+}
 /*Results and score area*/
 
 .result {

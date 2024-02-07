@@ -1,112 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RPSLS_ClassyCoders. Website for game lovers who are looking to play Rock,Paper,Scissors,Lizard,Spock Game."
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-
-        content="RPSLS_ClassyCoders. Website for game lovers who are looking to play Rock,Paper,Scissors,Lizard,Spock Game.">
-
-        <meta name="keywords" content="Rock-paper-scissors-lizard-spoke-game">
-    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
-    <script src="https://kit.fontawesome.com/5e4aba3606.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="Rock-paper-scissors-lizard-spoke-game" />
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" />
+    <script
+      src="https://kit.fontawesome.com/5e4aba3606.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>RPSLS</title>
-</head>
+  </head>
 
-<body>
-
-<div class="main-container flx-column">
-    <div class="container flx-column">
-    <!-- Title-block -->
-      <div class="title-block">
-        <h1>ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
+  <body>
+    <div class="main-container flx-column">
+      <div class="container flx-column">
+        <!-- Title-block -->
+        <div class="title-block">
+          <h1>ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
+        </div>
+        <p id="messageplayer" class="text-center text-uppercase">
+          Welcome to our game
+        </p>
       </div>
-      <p id="messageplayer" class="text-center text-uppercase" >Welcome to our game</p>
-    </div>
-    <!-- player-choice-->
-    <!--hide until needed to play-->
-    <div class="game-container flx-column align-center">
+      <!-- player-choice-->
+      <!--hide until needed to play-->
+      <div class="game-container flx-column align-center" id="game-container">
         <!--Player choice display area-->
 
         <div class="chosen-main icon flx-row hidden">
-        <div class="player-chosen icon flx-column">
-            <div class="player-turn"><p id ="player-rock" class="text-center">PLAYER</p></div>
-            <div class="player-turn"><p id ="player-paper" class="text-center">PLAYER</p></div>
-            <div class="player-turn"><p id ="player-scissor" class="text-center">PLAYER</p></div>
-            <div class="player-turn"><p id ="player-lizard" class="text-center">PLAYER</p></div>
-            <div class="player-turn"><p id ="player-spock" class="text-center">PLAYER</p></div>
-        </div>
-        <div class="player-choice"> 
-             <button class="choice-button" id="playerChoice-rock" onclick="handleButtonClick()">
-            <i class="fa-solid fa-hand-back-fist"></i></button>
-            <button class="choice-button" id="playerChoice-paper" onclick="handleButtonClick()">
-            <i class="fa-solid fa-hand"></i></button>
-            <button class="choice-button" id="playerChoice-scissors" onclick="handleButtonClick()">
-            <i class="fa-solid fa-hand-scissors"></i></button>
-            <button class="choice-button" id="playerChoice-lizard" onclick="handleButtonClick()">
-            <i class="fa-solid fa-hand-lizard"></i></button>
-            <button class="choice-button" id="playerChoice-spock" onclick="handleButtonClick()">
-            <i class="fa-solid fa-hand-spock"></i></button>
-        </div>
-    
-         <!--computer choice display area-->
-        <div class="computer-chosen icon flx-column">
-            <div class="computer-choice"><p id="computer-rock" class="text-center">COMPUTER</p></div>
-            <div class="computer-choice"><p id="computer-paper" class="text-center">COMPUTER</p></div>
-            <div class="computer-choice"><p id="computer-scissor" class="text-center">COMPUTER</p></div>
-            <div class="computer-choice"><p id="computer-lizard" class="text-center">COMPUTER</p></div>
-            <div class="computer-choice"><p id="computer-spock" class="text-center">COMPUTER</p></div>
-        </div>
-        
-    </div>
-    <div class="result flx-row">
-        <div class="win-caret text-center"id ="player-win"><i class="hide-at-start fa-solid fa-caret-up"></i></div>
-        <div class="display-result" class="text-center">WINNER</div>
-        <div class="win-caret text-center"id ="player-win"><i class="hide-at-start fa-solid fa-caret-up"></i></div>
-        </div>
-    <div class="score flx-column">
-    <div class="score-name text-center" >Score</div>
-    <div class="score-number flx-row">
-<div class="score flx-row"><p>Win: </p><p id ="score-won">0</p></div>
-<div class="score flx-row"><p>Draw: </p><p id="score-drew">0</p></div>
-<div class="score flx-row"><p>Loss: </p><p id="score-lost">0</p></div>
-    </div>
+          <div class="player-chosen icon flx-column">
+            <div class="player-turn" id="player-turn-block">
+              <p id="player-turn-text" class="text-center">PLAYER</p>
+            </div>
+          </div>
+          <div class="player-choice">
+            <button
+              class="choice-button"
+              id="playerChoice-rock"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand-back-fist"></i>
+            </button>
+            <button
+              class="choice-button"
+              id="playerChoice-paper"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand"></i>
+            </button>
+            <button
+              class="choice-button"
+              id="playerChoice-scissors"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand-scissors"></i>
+            </button>
+            <button
+              class="choice-button"
+              id="playerChoice-lizard"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand-lizard"></i>
+            </button>
+            <button
+              class="choice-button"
+              id="playerChoice-spock"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand-spock"></i>
+            </button>
+          </div>
 
-</div>
-<!-- hide after use -->
-<div id = "player-input-div">
-    <label for="player-name"></label>
-    <input type="text" id="player-name" placeholder="ENTER YOUR NAME">
-    <!-- Add a line break to move the button to the next line -->
-    <br>
-    <button class="align-center" id ="play-game">Play</button>
-</div>
-<div>
-<div class="buttons"><button class="rules-btn">Rules</button></div>
-<br>
-        <button id="reset">RESET</button> 
-<!--Hidden until JS detects click-->
-    <div class="modal-hide">
-    <div class="modal">
-        <span class="close-img">
-        <img src="assets/images/close.image.png" alt="Close Icon" id="close-icon">
-        </span>
-    <div class="rules-title">Rules</div>
-    <div class="rules">
-        <img src="../assets/images/rulespage.png" alt="rules">
-    </div>
-    </div>
-</div>
-</button>
-</div> 
-</div>    
-<script src="assets/js/script.js"></script>   
-</div>
-</body>
+          <!--computer choice display area-->
+          <div class="computer-chosen icon flx-column">
+            <div class="computer-choice">
+              <p id="computer-turn" class="text-center">COMPUTER</p>
+            </div>
+          </div>
+        </div>
+        <div class="result flx-row">
+          <div class="win-caret text-center" id="player-win">
+            <i class="hide-at-start fa-solid fa-caret-up"></i>
+          </div>
+          <div class="display-result" class="text-center">WINNER</div>
+          <div class="win-caret text-center" id="player-win">
+            <i class="hide-at-start fa-solid fa-caret-up"></i>
+          </div>
+        </div>
+        <div class="score flx-column">
+          <div class="score-name text-center">Score</div>
+          <div class="score-number flx-row">
+            <div class="score flx-row">
+              <p>Win:</p>
+              <p id="score-won">0</p>
+            </div>
+            <div class="score flx-row">
+              <p>Draw:</p>
+              <p id="score-drew">0</p>
+            </div>
+            <div class="score flx-row">
+              <p>Loss:</p>
+              <p id="score-lost">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hide after use -->
 
+      <div>
+        <div id="player-input-div">
+          <label for="player-name"></label>
+          <input type="text" id="player-name" placeholder="ENTER YOUR NAME" />
+          <!-- Add a line break to move the button to the next line -->
+          <br />
+          <button class="align-center" id="play-game">Play</button>
+        </div>
+        <div class="buttons"><button class="rules-btn">Rules</button></div>
+        <br />
+        <button id="reset">RESET</button>
+        <!--Hidden until JS detects click-->
+        <div class="modal-hide">
+          <div class="modal">
+            <span class="close-img">
+              <img
+                src="assets/images/close.image.png"
+                alt="Close Icon"
+                id="close-icon"
+              />
+            </span>
+            <div class="rules-title">Rules</div>
+            <div class="rules">
+              <img src="../assets/images/rulespage.png" alt="rules" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="/assets/js/script.js"></script>
+    </div>
+  </body>
 </html>
-
-
-
