@@ -6,6 +6,10 @@
     margin: 0;
 }
 /*Element Styles*/
+html {
+    margin: 0px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -13,6 +17,7 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    margin: 0px;
 }
 /*For visibility, remove later*/
 div{border: red 1px solid;}
@@ -50,13 +55,28 @@ div{border: red 1px solid;}
     margin-top: 20px;
 }
 
+#messageplayer {
+    padding-bottom: 5px;
+}
+
 /*player input stylers*/
 #player-input-div{
     width: 260px;
 }
 #play-game {
     margin: auto;
+    padding: 2px;
+    border: 1px solid grey;
+    border-radius: 2%;
     }
+
+#player-name {
+    width: 260px;
+    position: relative;
+    text-align: center;
+    align-self: center;
+
+}
 
 /*Gamer area Styles*/
 
@@ -87,10 +107,16 @@ div{border: red 1px solid;}
     width: 100%;
 }
 .player-turn {
-    position: absolute;
+    /* position: absolute; */
+    height: 10vh;
     top: 0px;
     width: 100%;
 }
+
+.computer-choice {
+    height: 10vh;
+}
+
 /*Results and score area*/
 
 .result {
