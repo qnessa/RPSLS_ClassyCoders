@@ -98,12 +98,7 @@ button {
 }
 
 
-#play-game {
-    margin: auto;
-    padding: 2px;
-    border: 1px solid grey;
-    border-radius: 2%;
-    }
+
 
 #player-name {
     width: 260px;

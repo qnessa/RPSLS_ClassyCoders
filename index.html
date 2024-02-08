@@ -7,7 +7,7 @@
     <meta name="description"
         content="RPSLS_ClassyCoders. Website for game lovers who are looking to play Rock,Paper,Scissors,Lizard,Spock Game." />
 
-    <meta name="keywords" content="Rock-paper-scissors-lizard-spoke-game" />
+    <meta name="keywords" content="Rock-paper-scissors-lizard-spock-game" />
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" />
     <script src="https://kit.fontawesome.com/5e4aba3606.js" crossorigin="anonymous"></script>
 
@@ -22,71 +22,73 @@
     <!-- For mobile devices, this starting page is displayed -->
 
     <!-- Rules container -->
-    <div class="rules-btn-container d-sm-none">
-        <button class="btn btn-circular">
-            Rules
-        </button>
-    </div>
-    <!-- /Rules -->
+    <div class="flx-column" id="mobile">
+        <div class="rules-btn-container d-sm-none">
+            <button type="button" class="btn btn-circular" data-toggle="modal" data-target="#rulesModal">
+                Rules
+            </button>
+        </div>
+        <!-- /Rules -->
 
-    <!-- Icons Container -->
-    <div class="container-fluid d-sm-none" id="mobile">
-        <div class="row">
-            <div class="col-2">
-                <button class="choice-button" id="playerChoice-rock" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand-back-fist fa-2x"></i>
-                </button>
+        <!-- Icons Container -->
+        <div class="container-fluid d-sm-none flx-column">
+            <div class="row">
+                <div class="col-2">
+                    <button class="choice-button">
+                        <i class="fa-solid fa-hand-back-fist fa-2x"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <p class="fixedWidth">Rock</p>
+                </div>
             </div>
-            <div class="col-10">
-                <p class="fixedWidth">Rock</p>
+            <div class="row">
+                <div class="col-2">
+                    <button class="choice-button">
+                        <i class="fa-solid fa-hand fa-2x"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <p class="fixedWidth">Paper</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <button class="choice-button">
+                        <i class="fa-solid fa-hand-scissors fa-2x"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <p class="fixedWidth">Scissors</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <button class="choice-button">
+                        <i class="fa-solid fa-hand-lizard fa-2x"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <p class="fixedWidth">Lizard</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <button class="choice-button">
+                        <i class="fa-solid fa-hand-spock fa-2x"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <p class="fixedWidth">Spock</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-2">
-                <button class="choice-button" id="playerChoice-paper" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand fa-2x"></i>
-                </button>
-            </div>
-            <div class="col">
-                <p class="fixedWidth">Paper</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <button class="choice-button" id="playerChoice-scissors" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand-scissors fa-2x"></i>
-                </button>
-            </div>
-            <div class="col">
-                <p class="fixedWidth">Scissors</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <button class="choice-button" id="playerChoice-lizard" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand-lizard fa-2x"></i>
-                </button>
-            </div>
-            <div class="col">
-                <p class="fixedWidth">Lizard</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <button class="choice-button" id="playerChoice-spock" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand-spock fa-2x"></i>
-                </button>
-            </div>
-            <div class="col">
-                <p class="fixedWidth">Spock</p>
-            </div>
-        </div>
-    </div>
-    <!-- /Icons Container -->
+        <!-- /Icons Container -->
 
-    <!-- Play Game button -->
-    <div class="start-container text-center">
-        <button class="btn btn-dark">Play Now</button>
+        <!-- Play Game button -->
+        <div class="start-container text-center">
+            <button class="btn btn-dark">Play Now</button>
+        </div>
     </div>
     <!-- /Play Game -->
 
@@ -194,6 +196,32 @@
             </div> -->
         </div>
 
+        <!-- Rules Modal -->
+
+        <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content text-center">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="rulesLabel">Game Rules</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="assets/images/rulespage.png"
+                            alt="Game Rules for Rock-Paper-Scissors-Lizard-Spock game">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-dark" id="play-game">Let's Go!</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /rulesModal -->
+
+        <!-- Username Modal -->
+
         <div class="modal fade" id="username" tabindex="-1" aria-labelledby="usernameLabel" aria-hidden="true">
             <div class="modal-dialog ">
                 <div class="modal-content text-center">
@@ -203,7 +231,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body text-center">
                         <label for="player-name">
                             <input type="text" class="align-center" id="player-name" maxlength="8"
                                 placeholder="ENTER YOUR NAME">
@@ -211,11 +239,15 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
-                        <button type="button" class="btn btn-primary" id="play-game">Let's Go!</button>
+                        <button type="button" class="btn btn-dark" id="play-game">Let's Go!</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- /usernameModal -->
+
+        
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -226,12 +258,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
             integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
         </script>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+        </script>
+
         <script src="/assets/js/script.js"></script>
 
-        </script>
 
     </div>
 </body>
