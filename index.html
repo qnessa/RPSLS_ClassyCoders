@@ -93,23 +93,25 @@
     <!-- /Play Game -->
     <!-- End of Mobile -->
 
-<!-- Start of large screen devices -->
-    <div class="flx-column" id="largeScreen">
+    <!-- Start of large screen devices -->
+    <div class="container flx-column id=" largeScreen">
 
-        <div class="flx-column">
+        <div class="row">
             <!-- Title-block -->
-            <div class="game-title">
+            <div class="col" id="game-title">
                 <h1>ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
             </div>
-            <div>
-                <p id="messageplayer" class="text-center text-uppercase">
-                    Welcome to our game
-                </p>
+            <div class="row text-center">
+                <div class="col" id="messageplayer">
+                    <p class="text-center text-uppercase">
+                        Welcome to our game
+                    </p>
+                </div>
             </div>
         </div>
         <!-- player-choice-->
         <!--hide until needed to play-->
-        <div class="game-container flx-column align-center" id="game-container">
+        <div class="row align-center" id="game-container">
             <!--Player choice display area-->
 
             <div class="chosen-main icon flx-row hidden">
@@ -186,7 +188,7 @@
             <div class="reset">
                 <button id="reset">RESET</button>
             </div>
-            
+
             <!--Hidden until JS detects click-->
 
             <!-- <div class="modal-hide">
@@ -216,11 +218,11 @@
                 </div>
                 <div class="modal-body text-center">
                     <img src="assets/images/rulespage.png" height="680px" width="320px"
-                    alt="Game Rules for Rock-Paper-Scissors-Lizard-Spock game">
+                        alt="Game Rules for Rock-Paper-Scissors-Lizard-Spock game">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    
+
                 </div>
             </div>
         </div>
