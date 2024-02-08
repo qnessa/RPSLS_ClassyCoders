@@ -152,5 +152,14 @@ div {
             height: 100vh;
         width: 90vw;
     }
+    
+    @media screen and (max-width:300px) {
+
+        .choice-button {
+            height: 10vh;
+            width: 15vw;
+            font-size: 1.3em;
+        }
     }
 
+}
