@@ -243,4 +243,8 @@ p#player-turn-text, p#computer-turn{
     #mobile {
         display: none;
     }
+
+    #largeScreen {
+        display: flex;
+    }
 }
