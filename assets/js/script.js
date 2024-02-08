@@ -22,7 +22,7 @@ let playerChoiceIds = [
 document.addEventListener("DOMContentLoaded", function () {});
  
  
- document.getElementById('play-now').addEventListener("click", function (){$('#mobile').modal('hide');
+document.getElementById('play-now').addEventListener("click", function (){$('#mobile').modal('hide');
   console=log('button clicked');
   });
 
