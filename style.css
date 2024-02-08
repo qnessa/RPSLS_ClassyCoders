@@ -222,7 +222,7 @@ p#player-turn-text, p#computer-turn{
 /*Media Queries*/
 
 /*Smallest screens*/
-@media screen and (max-width:480px) {
+@media screen and (max-width:580px) {
     h1{
         font-size: .9em;
         letter-spacing: .1px;
@@ -232,3 +232,13 @@ p#player-turn-text, p#computer-turn{
             flex-direction: column;
         }
     }
+
+    #largeScreen {
+        display: none;
+    }
+
+@media screen and (min-width:581px) {
+    #mobile {
+        display: none;
+    }
+}
