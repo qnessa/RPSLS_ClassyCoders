@@ -20,48 +20,18 @@ let playerChoiceIds = [
 //**const need score dom variables**
 //Let the DOM Load
 document.addEventListener("DOMContentLoaded", function () {});
- 
- 
-document.getElementById('play-now').addEventListener("click", function (){document.getElementById('mobile').style.display ="none";
-  console=log ('button clicked')
-});
 
 function gameLoop() {
 handleButtonClick()
-getPlayerName();
 getComputerTurn();
 getResult();
 
-  document.getElementById("reset").addEventListener("click", function () {
-    location.reload();
-  }); // change back to reload later
-
-  logout();
+document.getElementById("reset").addEventListener("click", function () {
+location.reload();
+}); // change back to reload later
+logout();
 };
 
-//Functions
-// Event Listener for player name
-function getPlayerName() {
-// Get the modal
-var modal = document.getElementById("username");
-// Get the input element within the modal
-var input = modal.querySelector("#player-name");
-// Set focus on the input when the modal is displayed
-modal.addEventListener("shown.bs.modal", function () {
-  input.focus(); 
-  playerName = input.value;
-  console.log("Input value: " + playerName);
-});
-// Example of getting the value of the input
-
- 
-
-// playerName = document.getElementById('player-name').value;
- playerNameElement.innerText = playerName;
- // document.getElementById('lets-go').addEventListener("click", function () {document.getElementById('modal-dialog').style.display = 'none'});
- // document.getElementById('username').style.display = 'none';
- // console.log(playerName);
-};
 
 // Generate Computer Turn
 function getComputerTurn() {
@@ -73,14 +43,10 @@ function getComputerTurn() {
 //get players choice from DOM
 function handleButtonClick() {
   playerChoiceIds.forEach(function (playerTurn) {
-    document.getElementById(playerTurn).removeAttribute("style");
-    document.getElementById(playerTurn).removeAttribute("style");
-    let PlayerChoiceId = document.getElementById(playerTurn);
+  let PlayerChoiceId = document.getElementById(playerTurn);
     if (PlayerChoiceId) {
       PlayerChoiceId.addEventListener("click", function () {
-        document.getElementById(playerTurn).style.border = "thin solid #00ff00";
-        document.getElementById(playerTurn).style.borderRadius = "25px";
-        playerTurn = playerTurn.slice(13);
+       playerTurn = playerTurn.slice(13);
       });
     }
   });
@@ -127,8 +93,7 @@ function getResult() {
 }
 
 function logout() {
-  console.log(playerName);
-  console.log(`Computer chose ${computerTurn}`);
+console.log(`Computer chose ${computerTurn}`);
   console.log(randNum);
   console.log(computerTurn);
   console.log(scores);
