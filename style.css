@@ -75,6 +75,9 @@ div {
 button { 
     background-color: snow;
 }
+.text-uppercase {
+    text-transform: uppercase;
+}
 /*Main Container and Title*/
 .main-container{
     height: 100vh;
