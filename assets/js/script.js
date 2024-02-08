@@ -22,9 +22,9 @@ let playerChoiceIds = [
 document.addEventListener("DOMContentLoaded", function () {});
  
  
- document.getElementById('play-now').addEventListener("click", function (){$('#mobile').modal('hide');
-  console=log('button clicked');
-  });
+document.getElementById('play-now').addEventListener("click", function (){document.getElementById('mobile').style.display ="none";
+  console=log ('button clicked')
+});
 
 function gameLoop() {
 handleButtonClick()
