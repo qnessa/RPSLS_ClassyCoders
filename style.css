@@ -50,6 +50,7 @@ div {
 #mobile {
     flex-direction: column;
     align-items: center;
+   
 }
 
 .col-2 {
@@ -81,6 +82,7 @@ button {
 /*Main Container and Title*/
 .main-container{
     height: 100vh;
+
 }
 .game-title{
     
@@ -141,7 +143,7 @@ button {
     width: 100%;
 }
 .player-turn {
-    /* position: absolute; */
+    position: absolute;
     height: 10vh;
     top: 0px;
     width: 100%;
@@ -244,5 +246,6 @@ p#player-turn-text, p#computer-turn{
 
     #largeScreen {
         display: flex;
+
     }
 }
