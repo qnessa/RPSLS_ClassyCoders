@@ -18,9 +18,13 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0px;
+    background-color: snow;
 }
 /*For visibility, remove later*/
-div{border: red 1px solid;}
+div {
+    /* border: red 1px solid; */
+    display: flex;
+}
 
 /* Utility Class Styling*/
 .flx-column {
@@ -40,7 +44,36 @@ div{border: red 1px solid;}
     text-align: center;
 }
 .hide-at-start{
-    /* display: none; */
+    display: none;
+}
+
+#mobile {
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-2 {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    width: 70vw;
+}
+
+.fixedWidth {
+    width: 30vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.9rem;
+    padding-left: 10vw;
+
+}
+
+button { 
+    background-color: snow;
 }
 .text-uppercase {
     text-transform: uppercase;
@@ -151,6 +184,38 @@ p#player-turn-text, p#computer-turn{
 }
 
 /*rules modal*/
+/* .rules  {
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 8vh;
+} */
+
+.rules-btn-container {
+    position: fixed;
+    top: 5vh;
+    right: 7vw;
+    z-index: 999;
+}
+
+.start-container {
+    position: fixed;
+    bottom: 10vh;
+
+}
+
+.btn-circular {
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: 600;
+    padding: 6px 10px;
+}
+
 .modal-hide{
     display: none;
     height: 100vh;

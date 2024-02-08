@@ -10,25 +10,96 @@
     <meta name="keywords" content="Rock-paper-scissors-lizard-spoke-game" />
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" />
     <script src="https://kit.fontawesome.com/5e4aba3606.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
-    
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="style.css">
     <title>RPSLS</title>
 </head>
 
 <body>
-    <div class="container flx-column">
+    <!-- For mobile devices, this starting page is displayed -->
+
+    <!-- Rules container -->
+    <div class="rules-btn-container d-sm-none">
+        <button class="btn btn-circular">
+            Rules
+        </button>
+    </div>
+    <!-- /Rules -->
+
+    <!-- Icons Container -->
+    <div class="container-fluid d-sm-none" id="mobile">
+        <div class="row">
+            <div class="col-2">
+                <button class="choice-button" id="playerChoice-rock" onclick="handleButtonClick()">
+                    <i class="fa-solid fa-hand-back-fist fa-2x"></i>
+                </button>
+            </div>
+            <div class="col-10">
+                <p class="fixedWidth">Rock</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <button class="choice-button" id="playerChoice-paper" onclick="handleButtonClick()">
+                    <i class="fa-solid fa-hand fa-2x"></i>
+                </button>
+            </div>
+            <div class="col">
+                <p class="fixedWidth">Paper</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <button class="choice-button" id="playerChoice-scissors" onclick="handleButtonClick()">
+                    <i class="fa-solid fa-hand-scissors fa-2x"></i>
+                </button>
+            </div>
+            <div class="col">
+                <p class="fixedWidth">Scissors</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <button class="choice-button" id="playerChoice-lizard" onclick="handleButtonClick()">
+                    <i class="fa-solid fa-hand-lizard fa-2x"></i>
+                </button>
+            </div>
+            <div class="col">
+                <p class="fixedWidth">Lizard</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <button class="choice-button" id="playerChoice-spock" onclick="handleButtonClick()">
+                    <i class="fa-solid fa-hand-spock fa-2x"></i>
+                </button>
+            </div>
+            <div class="col">
+                <p class="fixedWidth">Spock</p>
+            </div>
+        </div>
+    </div>
+    <!-- /Icons Container -->
+
+    <!-- Play Game button -->
+    <div class="start-container text-center">
+        <button class="btn btn-dark">Play Now</button>
+    </div>
+    <!-- /Play Game -->
+
+    <div class="flx-column hide-at-start">
         <div class="flx-column">
             <!-- Title-block -->
             <div class="game-title">
                 <h1>ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
             </div>
             <div>
-            <p id="messageplayer" class="text-center text-uppercase">
-                Welcome to our game
-            </p>
+                <p id="messageplayer" class="text-center text-uppercase">
+                    Welcome to our game
+                </p>
             </div>
         </div>
         <!-- player-choice-->
@@ -100,18 +171,17 @@
             <div id="player-input-div">
                 <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#username">
                     Play Now
-                  </button>
-                <!-- <label for="player-name"></label> -->
-                <!-- <input type="text" id="player-name" placeholder="ENTER YOUR NAME"> -->
-                <!-- Add a line break to move the button to the next line -->
+                </button>
+
                 <br />
-                <!-- <button class="align-center" id="play-game">Play</button> -->
+
             </div>
             <div class="buttons"><button class="rules-btn">Rules</button></div>
             <br>
             <button id="reset">RESET</button>
             <!--Hidden until JS detects click-->
-            <div class="modal-hide" >
+
+            <!-- <div class="modal-hide">
                 <div class="modal">
                     <span class="close-img">
                         <img src="assets/images/close.image.png" alt="Close Icon" id="close-icon" />
@@ -121,50 +191,48 @@
                         <img src="../assets/images/rulespage.png" alt="rules" />
                     </div>
                 </div>
+            </div> -->
+        </div>
+
+        <div class="modal fade" id="username" tabindex="-1" aria-labelledby="usernameLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content text-center">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="usernameLabel">Enter your name to start!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="player-name">
+                            <input type="text" class="align-center" id="player-name" maxlength="8"
+                                placeholder="ENTER YOUR NAME">
+                        </label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
+                        <button type="button" class="btn btn-primary" id="play-game">Let's Go!</button>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+        </script>
         
-  <div class="modal fade" id="username" tabindex="-1" aria-labelledby="usernameLabel" aria-hidden="true">
-    <div class="modal-dialog" id="modal-dialog">
-      <div class="modal-content text-center">
-        <div class="modal-header">
-          <h5 class="modal-title" id="usernameLabel">Enter your name to start!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <label for="player-name"></label>
-            <input type="text" class="align-center" id="player-name" maxlength="8" placeholder="ENTER YOUR NAME">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+        <script src="/assets/js/script.js"></script>
 
+        </script>
 
-      <!-- <div>
-        <div id="player-input-div">
-          <label for="player-name"></label>
-          <input type="text" id="player-name" maxlength="8"  placeholder="ENTER YOUR NAME" /> -->
-          <!-- Add a line break to move the button to the next line -->
-          <!-- <br> -->
-          <!-- <button class="align-center" id="play-game">Play</button> -->
-
-        </label>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
-          <button id="lets-go" type="button" class="btn btn-primary">Let's Go!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
-        
-    </script>      
-  <script src="/assets/js/script.js"></script>
     </div>
 </body>
 
