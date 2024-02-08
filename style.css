@@ -57,65 +57,31 @@ div{border: red 1px solid;}
 
 /*Gamer area Styles*/
 .game-container {
-  
-}
+    background: url('/assets/images/rulespage.png');
+    background-size: cover;
+  }
 
 .player-choice{
     height: 50vh;
     width: 60px;
     margin: auto;
 }
-.player-chosen {
-    position: relative;
-    height: 50vh;
-    width: 100px;
-}
-.computer-chosen{
-    position: relative;
-    height: 50vh;
-    width: 100px;
-}
+
 .choice-button{
     height: 10vh;
     width: 60px;
     font-size: 2em;
 }
-/* Relative positions so can slide via JS*/
-.computer-turn {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-}
-.player-turn {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-}
-/*player input stylers*/
-#player-input-div{
-    width: 260px;
-    display: block;
-}
+
+
 /*Results and score area*/
 
 .result {
     width: 260px;
 }
-.win-caret{width: 100px;}
-.score {
-    width: 260px;
-    text-align: center;
-}
 
-/*rules modal*/
-.modal-hide{
-    display: none;
-    height: 100vh;
-    width: 100vh;
-    position: absolute;
-    left:0;
-    top: 0;
-}
+
+
 /*Media Queries*/
 
 /*Smallest screens*/
@@ -128,4 +94,8 @@ div{border: red 1px solid;}
             margin: auto;
             flex-direction: column;
         }
+        .main-container{
+            height: 100vh;
+        width: 90vw;
+    }
     }

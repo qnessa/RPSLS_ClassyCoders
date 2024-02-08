@@ -35,11 +35,7 @@
         <!--Player choice display area-->
 
         <div class="chosen-main icon flx-row hidden">
-          <div class="player-chosen icon flx-column">
-            <div class="player-turn" id="player-turn-block">
-              <p id="player-turn-text" class="text-center">PLAYER</p>
-            </div>
-          </div>
+          
           <div class="player-choice">
             <button
               class="choice-button"
@@ -78,21 +74,7 @@
             </button>
           </div>
 
-          <!--computer choice display area-->
-          <div class="computer-chosen icon flx-column">
-            <div class="computer-choice">
-              <p id="computer-turn" class="text-center">COMPUTER</p>
-            </div>
-          </div>
-        </div>
-        <div class="result flx-row">
-          <div class="win-caret text-center" id="player-win">
-            <i class="hide-at-start fa-solid fa-caret-up"></i>
-          </div>
-          <div class="display-result" class="text-center">WINNER</div>
-          <div class="win-caret text-center" id="player-win">
-            <i class="hide-at-start fa-solid fa-caret-up"></i>
-          </div>
+        
         </div>
         <div class="score flx-column">
           <div class="score-name text-center">Score</div>
@@ -114,34 +96,7 @@
       </div>
       <!-- hide after use -->
 
-      <div>
-        <div id="player-input-div">
-          <label for="player-name"></label>
-          <input type="text" id="player-name" maxlength="8"  placeholder="ENTER YOUR NAME" />
-          <!-- Add a line break to move the button to the next line -->
-          <br />
-          <button class="align-center" id="play-game">Play</button>
-        </div>
-        <div class="buttons"><button class="rules-btn">Rules</button></div>
-        <br />
-        <button id="reset">RESET</button>
-        <!--Hidden until JS detects click-->
-        <div class="modal-hide">
-          <div class="modal">
-            <span class="close-img">
-              <img
-                src="assets/images/close.image.png"
-                alt="Close Icon"
-                id="close-icon"
-              />
-            </span>
-            <div class="rules-title">Rules</div>
-            <div class="rules">
-              <img src="../assets/images/rulespage.png" alt="rules" />
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       <script src="/assets/js/script.js"></script>
     </div>
