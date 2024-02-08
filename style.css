@@ -243,15 +243,9 @@ p#player-turn-text, p#computer-turn{
     #mobile {
         display: none;
     }
-}
-
 
     #largeScreen {
-        display: none;
-    }
+        display: flex;
 
-@media screen and (min-width:581px) {
-    #mobile {
-        display: none;
     }
 }
