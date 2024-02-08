@@ -42,6 +42,9 @@ div{border: red 1px solid;}
 .hide-at-start{
     /* display: none; */
 }
+.text-uppercase {
+    text-transform: uppercase;
+}
 /*Main Container and Title*/
 .main-container{
     height: 100vh;
