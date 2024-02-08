@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* clear defaults*/
+* {box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+/*Element Styles*/
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+/*For visibility, remove later*/
+div{border: red 1px solid;}
+
+/* Utility Class Styling*/
+.flx-column {
+    display: flex;
+    flex-direction: column;
+}
+.flx-row{
+    display: flex;
+    flex-direction: row;
+}
+.align-center{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+.hide-at-start{
+    display: none;
+}
+/*Main Container and Title*/
+.main-container{
+    height: 100vh;
+}
+.title-block{
+    
+    height: 10vh;
+    vertical-align: middle;
+}
+.title-block h1 {
+    margin-top: 20px;
+}
+
+
+#play-game {
+    margin: auto;
+    }
+
+/*Gamer area Styles*/
+.game-container {
+  
+}
+
+.player-choice{
+    height: 50vh;
+    width: 60px;
+    margin: auto;
+}
+.player-chosen {
+    position: relative;
+    height: 50vh;
+    width: 100px;
+}
+.computer-chosen{
+    position: relative;
+    height: 50vh;
+    width: 100px;
+}
+.choice-button{
+    height: 10vh;
+    width: 60px;
+    font-size: 2em;
+}
+/* Relative positions so can slide via JS*/
+.computer-turn {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.player-turn {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+/*player input stylers*/
+#player-input-div{
+    width: 260px;
+    display: block;
+}
+/*Results and score area*/
+
+.result {
+    width: 260px;
+}
+.win-caret{width: 100px;}
+.score {
+    width: 260px;
+    text-align: center;
+}
+
+/*rules modal*/
+.modal-hide{
+    display: none;
+    height: 100vh;
+    width: 100vh;
+    position: absolute;
+    left:0;
+    top: 0;
+}
+/*Media Queries*/
+
+/*Smallest screens*/
+@media screen and (max-width:480px) {
+    h1{
+        font-size: .9em;
+        letter-spacing: .1px;
+    }
+    .player-choice{
+            margin: auto;
+            flex-direction: column;
+        }
+    }

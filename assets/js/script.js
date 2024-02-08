@@ -20,14 +20,9 @@ let playerChoiceIds = [
 //**const need score dom variables**
 //Let the DOM Load
 document.addEventListener("DOMContentLoaded", function () {});
-
-
-
-
 //get players choice from DOM
 function handleButtonClick() {
   playerChoiceIds.forEach(function (playerChoice) {
-
     playerChoiceId = document.getElementById(playerChoice);
     if (playerChoiceId) {
       playerChoiceId.addEventListener("click", function () {
