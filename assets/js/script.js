@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {});
  
  
 document.getElementById('play-now').addEventListener("click", function (){document.getElementById('mobile').style.display ="none";
-  console=log ('button clicked')
+document.getElementById('outer-div').style.display = "flex"
 });
 
 function gameLoop() {
