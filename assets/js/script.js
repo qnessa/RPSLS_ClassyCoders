@@ -20,7 +20,6 @@ let playerChoiceIds = [
 //**const need score dom variables**
 //Let the DOM Load
 document.addEventListener("DOMContentLoaded", function () {});
-document.getElementById('lets-go').addEventListener("click", function () {document.getElementById('modal.dialogue').remove()});
 function gameLoop() {
 handleButtonClick()
 getPlayerName();
@@ -28,7 +27,7 @@ getComputerTurn();
 getResult();
 
   document.getElementById("reset").addEventListener("click", function () {
-    exit = true;
+    location.reload();
   }); // change back to reload later
 
   logout();
@@ -37,12 +36,26 @@ getResult();
 //Functions
 // Event Listener for player name
 function getPlayerName() {
-  playerName = document.getElementById("player-name").value;
-  playerNameElement.innerText = playerName;
-}
-letsGoButton.addEventListener('click', function() {
-    console.log("The 'Let's Go' button was clicked!");
+// Get the modal
+var modal = document.getElementById("username");
+// Get the input element within the modal
+var input = modal.querySelector("#player-name");
+// Set focus on the input when the modal is displayed
+modal.addEventListener("shown.bs.modal", function () {
+  input.focus(); 
+  playerName = input.value;
+  console.log("Input value: " + playerName);
 });
+// Example of getting the value of the input
+
+ 
+
+// playerName = document.getElementById('player-name').value;
+ playerNameElement.innerText = playerName;
+ // document.getElementById('lets-go').addEventListener("click", function () {document.getElementById('modal-dialog').style.display = 'none';});
+ // document.getElementById('username').style.display = 'none';
+ // console.log(playerName);
+};
 
 // Generate Computer Turn
 function getComputerTurn() {
@@ -114,4 +127,4 @@ function logout() {
   console.log(computerTurn);
   console.log(scores);
 }
-gameloop()
+gameLoop()
