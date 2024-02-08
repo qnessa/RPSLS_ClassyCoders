@@ -51,28 +51,34 @@ div{border: red 1px solid;}
 }
 
 
-#play-game {
-    margin: auto;
+#play {
+    position: absaolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height:50px;
+    
     }
 
 /*Gamer area Styles*/
 .game-container {
-    background: url('/assets/images/rulespage.png');
+    background: url('/assets/images/rulespage.png') center;
     background-size: cover;
-  }
+    height: 70vh;
+    width:
+}
 
 .player-choice{
-    height: 50vh;
-    width: 60px;
+    height: 80vh;
+    width: 25vw;
     margin: auto;
 }
 
 .choice-button{
-    height: 10vh;
-    width: 60px;
+    height: 14vh;
+    width: 25vw;
     font-size: 2em;
 }
-
 
 /*Results and score area*/
 
@@ -96,6 +102,12 @@ div{border: red 1px solid;}
         }
         .main-container{
             height: 100vh;
+        width: 90vw;
+    }
+    .game-container {
+       
+
+        height: 70vh;
         width: 90vw;
     }
     }

@@ -26,12 +26,12 @@ handleButtonClick()
 getComputerTurn();
 getResult();
 
-document.getElementById("reset").addEventListener("click", function () {
-location.reload();
-}); // change back to reload later
+//document.getElementById("reset").addEventListener("click", function () {
+//location.reload();
+//}); // change back to reload later
 logout();
-};
-
+//};
+}
 
 // Generate Computer Turn
 function getComputerTurn() {
