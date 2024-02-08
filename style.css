@@ -225,6 +225,7 @@ p#player-turn-text, p#computer-turn{
 
 /*Smallest screens*/
 @media screen and (max-width:580px) {
+@media screen and (max-width:580px) {
     h1{
         font-size: .9em;
         letter-spacing: .1px;
@@ -242,9 +243,5 @@ p#player-turn-text, p#computer-turn{
 @media screen and (min-width:581px) {
     #mobile {
         display: none;
-    }
-
-    #largeScreen {
-        display: flex;
     }
 }
