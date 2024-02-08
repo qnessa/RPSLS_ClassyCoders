@@ -20,6 +20,12 @@ let playerChoiceIds = [
 //**const need score dom variables**
 //Let the DOM Load
 document.addEventListener("DOMContentLoaded", function () {});
+ 
+ 
+ document.getElementById('play-now').addEventListener("click", function (){$('#mobile').modal('hide');
+  console=log('button clicked');
+  });
+
 function gameLoop() {
 handleButtonClick()
 getPlayerName();
@@ -52,7 +58,7 @@ modal.addEventListener("shown.bs.modal", function () {
 
 // playerName = document.getElementById('player-name').value;
  playerNameElement.innerText = playerName;
- // document.getElementById('lets-go').addEventListener("click", function () {document.getElementById('modal-dialog').style.display = 'none';});
+ // document.getElementById('lets-go').addEventListener("click", function () {document.getElementById('modal-dialog').style.display = 'none'});
  // document.getElementById('username').style.display = 'none';
  // console.log(playerName);
 };
