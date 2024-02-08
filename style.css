@@ -156,8 +156,8 @@ button {
     height: 10vh;
 }
 
-.no-pad {
-    padding: 0;
+.col-12 {
+    justify-content: center;
 }
 
 /* p#player-turn-text, p#computer-turn{
@@ -233,8 +233,9 @@ button {
 /*Smallest screens*/
 @media screen and (max-width:580px) {
     h1{
-        /* font-size: .9em;
-        letter-spacing: .1px; */
+        font-size: 1.2em;
+        letter-spacing: .1px;
+        font-weight: 600;
     }
     .player-choice{
             margin: auto;
@@ -249,6 +250,12 @@ button {
 @media screen and (min-width:581px) {
     #mobile {
         display: none;
+    }
+
+    h1{
+        font-size: 1.5em;
+        letter-spacing: .1px;
+        font-weight: 600;
     }
 
     #largeScreen {
