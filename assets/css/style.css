@@ -76,6 +76,13 @@ div {
     background-size: cover;
 }
 
+.btn-container {
+    position: relative;
+    width: 90vw;
+    height: 60vh;
+    margin: auto;
+}
+
 .player-choice {
     height: 60vh;
     width: 60px;
@@ -87,7 +94,35 @@ div {
     height: 10vh;
     width: 60px;
     font-size: 2em;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }
+
+.choice-button:nth-child(1) {
+    top: 34%;
+  left: 50%;
+  }
+  
+.choice-button:nth-child(2) {
+    top: 58%;
+  left: calc(50% + 100px);
+  }
+  
+.choice-button:nth-child(3) {
+    top: calc(67% + 87px);
+  left: calc(58% + 50px);
+
+  }
+  
+.choice-button:nth-child(4) {
+    top: calc(67% + 87px);
+  left: calc(46% - 50px);
+  }
+  
+.choice-button:nth-child(5) {
+    top: 58%;
+  left: calc(50% - 100px);
+  }
 
 
 /*Results and score area*/
