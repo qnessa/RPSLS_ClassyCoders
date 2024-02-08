@@ -43,14 +43,10 @@ function getComputerTurn() {
 //get players choice from DOM
 function handleButtonClick() {
   playerChoiceIds.forEach(function (playerTurn) {
-    document.getElementById(playerTurn).removeAttribute("style");
-    document.getElementById(playerTurn).removeAttribute("style");
-    let PlayerChoiceId = document.getElementById(playerTurn);
+  let PlayerChoiceId = document.getElementById(playerTurn);
     if (PlayerChoiceId) {
       PlayerChoiceId.addEventListener("click", function () {
-        document.getElementById(playerTurn).style.border = "thin solid #00ff00";
-        document.getElementById(playerTurn).style.borderRadius = "25px";
-        playerTurn = playerTurn.slice(13);
+       playerTurn = playerTurn.slice(13);
       });
     }
   });
