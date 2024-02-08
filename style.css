@@ -6,10 +6,6 @@
     margin: 0;
 }
 /*Element Styles*/
-html {
-    margin: 0px;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -17,14 +13,9 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    margin: 0px;
-    background-color: snow;
 }
 /*For visibility, remove later*/
-div {
-    /* border: red 1px solid; */
-    display: flex;
-}
+div{border: red 1px solid;}
 
 /* Utility Class Styling*/
 .flx-column {
@@ -46,82 +37,32 @@ div {
 .hide-at-start{
     display: none;
 }
-
-#mobile {
-    flex-direction: column;
-    align-items: center;
-   
-}
-
-.col-2 {
-    padding: 0;
-}
-
-.row {
-    margin: 0;
-    width: 70vw;
-}
-
-.fixedWidth {
-    width: 30vw;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 10vh;
-    font-size: 1.9rem;
-    padding-left: 10vw;
-
-}
-
-button { 
-    background-color: snow;
-}
-.text-uppercase {
-    text-transform: uppercase;
-}
 /*Main Container and Title*/
 .main-container{
     height: 100vh;
-
 }
-#game-title{
+.title-block{
     
     height: 10vh;
     vertical-align: middle;
-    justify-content: center;
 }
-.game-title h1 {
+.title-block h1 {
     margin-top: 20px;
-    font-size: 1.8rem;
-    text-align: center;
-}
-
-#messageplayer {
-    padding-bottom: 5px;
-    justify-content: center;
-    font-size: 1.4rem;
 }
 
 
-
-
-#player-name {
-    width: 260px;
-    position: relative;
-    text-align: center;
-    align-self: center;
-
-}
+#play-game {
+    margin: auto;
+    }
 
 /*Gamer area Styles*/
 .game-container {
-    /* text-align: center;
-    align-self: center; */
+  
 }
 
 .player-choice{
     height: 50vh;
-    width: 25vw;
+    width: 60px;
     margin: auto;
 }
 .player-chosen {
@@ -136,7 +77,7 @@ button {
 }
 .choice-button{
     height: 10vh;
-    width: 25vw;
+    width: 60px;
     font-size: 2em;
 }
 /* Relative positions so can slide via JS*/
@@ -147,31 +88,14 @@ button {
 }
 .player-turn {
     position: absolute;
-    height: 10vh;
     top: 0px;
     width: 100%;
 }
-
-.computer-choice {
-    height: 10vh;
-}
-
-.col-12 {
-    justify-content: center;
-}
-
-/* p#player-turn-text, p#computer-turn{
-    margin: auto;
-    line-height: 10vh;
-} */
-
 /*player input stylers*/
 #player-input-div{
-    /* width: 260px; */
-    
+    width: 260px;
+    display: block;
 }
-
-
 /*Results and score area*/
 
 .result {
@@ -183,43 +107,7 @@ button {
     text-align: center;
 }
 
-#score-lost, #score-won, #score-drew {
-    margin-left: 3px;
-}
-
 /*rules modal*/
-/* .rules  {
-    height: 8vh;
-    width: 8vh;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 8vh;
-} */
-
-.rules-btn-container {
-    position: fixed;
-    top: 5vh;
-    right: 7vw;
-    z-index: 999;
-}
-
-.start-container {
-    position: fixed;
-    bottom: 10vh;
-
-}
-
-.btn-circular {
-    border-radius: 50%;
-    width: 10vh;
-    height: 10vh;
-    font-size: 1.2rem;
-    border: 2px solid black;
-    text-align: center;
-    font-weight: 600;
-    padding: 2vh 3vw;
-}
-
 .modal-hide{
     display: none;
     height: 100vh;
@@ -231,35 +119,13 @@ button {
 /*Media Queries*/
 
 /*Smallest screens*/
-@media screen and (max-width:580px) {
+@media screen and (max-width:480px) {
     h1{
-        font-size: 1.2em;
+        font-size: .9em;
         letter-spacing: .1px;
-        font-weight: 600;
     }
     .player-choice{
             margin: auto;
             flex-direction: column;
         }
     }
-
-    #largeScreen {
-        display: none;
-    }
-
-@media screen and (min-width:581px) {
-    #mobile {
-        display: none;
-    }
-
-    h1{
-        font-size: 1.5em;
-        letter-spacing: .1px;
-        font-weight: 600;
-    }
-
-    #largeScreen {
-        display: flex;
-
-    }
-}

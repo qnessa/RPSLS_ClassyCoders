@@ -2,307 +2,97 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="RPSLS_ClassyCoders. Website for game lovers who are looking to play Rock,Paper,Scissors,Lizard,Spock Game." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="RPSLS_ClassyCoders. Website for game lovers who are looking to play Rock,Paper,Scissors,Lizard,Spock Game." />
 
-    <meta name="keywords" content="Rock-paper-scissors-lizard-spock-game" />
-    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" />
-    <script src="https://kit.fontawesome.com/5e4aba3606.js" crossorigin="anonymous"></script>
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>RPSLS</title>
+  <meta name="keywords" content="Rock-paper-scissors-lizard-spoke-game" />
+  <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" />
+  <script src="https://kit.fontawesome.com/5e4aba3606.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>RPSLS</title>
 </head>
 
-<body>
-    <!-- For mobile devices, this starting page is displayed -->
-
-    <!-- Rules container -->
-    <!-- <div class="flx-column" id="mobile">
-        <div class="rules-btn-container">
-            <button type="button" class="btn btn-circular" data-toggle="modal" data-target="#rulesModal">
-                Rules
+  <body>
+    <div class="main-container flx-column">
+      <div class="container flx-column">
+        <!-- Title-block -->
+        <div class="title-block">
+          <h1 class ="text-center">ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
+        </div>
+        <p id="messageplayer" class="text-center text-uppercase">
+          Welcome to our game
+        </p>
+      </div>
+      <!-- player-choice-->
+      <!--hide until needed to play-->
+      <div class="game-container flx-column align-center" id="game-container">
+        <button id ="play">Play</button>
+       
+        <div class="btn-container flx-row hidden">
+          
+          <div class="player-choice">
+            <button
+              class="choice-button"
+              id="playerChoice-rock"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand-back-fist"></i>
             </button>
-        </div>
-        /Rules
-
-        Icons Container -->
-    <!-- <div class="container-fluid flx-column">
-            <div class="row">
-                <div class="col-2">
-                    <button class="choice-button">
-                        <i class="fa-solid fa-hand-back-fist fa-2x"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <p class="fixedWidth">Rock</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <button class="choice-button">
-                        <i class="fa-solid fa-hand fa-2x"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <p class="fixedWidth">Paper</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <button class="choice-button">
-                        <i class="fa-solid fa-hand-scissors fa-2x"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <p class="fixedWidth">Scissors</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <button class="choice-button">
-                        <i class="fa-solid fa-hand-lizard fa-2x"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <p class="fixedWidth">Lizard</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <button class="choice-button">
-                        <i class="fa-solid fa-hand-spock fa-2x"></i>
-                    </button>
-                </div>
-                <div class="col">
-                    <p class="fixedWidth">Spock</p>
-                </div>
-            </div>
-        </div> -->
-    <!-- /Icons Container -->
-
-    <!-- Play Game button -->
-    <!-- <div class="start-container text-center">
-            <button id="play-now" class="btn btn-dark">Play Now</button>
-        </div>
-    </div> -->
-    <!-- /Play Game -->
-    <!-- End of Mobile -->
-
-    <!-- Start of large screen devices -->
-    <div class="container-fluid flx-column text-center" id="game-container">
-        <div class="rules-btn-container">
-            <button type="button" class="btn btn-circular" data-toggle="modal" data-target="#rulesModal">
-                Rules
+            <button
+              class="choice-button"
+              id="playerChoice-paper"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand"></i>
             </button>
+            <button
+              class="choice-button"
+              id="playerChoice-scissors"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand-scissors"></i>
+            </button>
+            <button
+              class="choice-button"
+              id="playerChoice-lizard"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand-lizard"></i>
+            </button>
+            <button
+              class="choice-button"
+              id="playerChoice-spock"
+              onclick="handleButtonClick()"
+            >
+              <i class="fa-solid fa-hand-spock"></i>
+            </button>
+          </div>
+
+        
         </div>
-
-        <div class="row">
-            <!-- Title-block -->
-            <div class="col flex-wrap" id="game-title">
-                <h1>ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
+        <div class="score flx-column">
+          <div class="score-name text-center">Score</div>
+          <div class="score-number flx-row">
+            <div class="score flx-row">
+              <p>Win:</p>
+              <p id="score-won">0</p>
             </div>
+            <div class="score flx-row">
+              <p>Draw:</p>
+              <p id="score-drew">0</p>
+            </div>
+            <div class="score flx-row">
+              <p>Loss:</p>
+              <p id="score-lost">0</p>
+            </div>
+          </div>
         </div>
-        <div class="row text-center">
-            <div class="col" id="messageplayer">
-                <p class="text-center text-uppercase">
-                    Welcome to our game
-                </p>
-            </div>
-        </div>
+      </div>
 
-        <!-- player-choice-->
-        <!--hide until needed to play-->
-        <!-- <div class="row align-center"> -->
-        <!--Player choice display area-->
-
-        <div class="row">
-            <!-- <div class="player-chosen icon flx-column">
-                    <div class="player-turn" id="player-turn-block">
-                        <p id="player-turn-text" class="text-center">PLAYER</p>
-                    </div> -->
-            <!-- </div> -->
-            <div class="col-sm-4"></div>
-            <div class="col-12 col-sm-4">
-                <button class="choice-button" id="playerChoice-rock" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand-back-fist fa-2x"></i>
-                </button>
-            </div>
-            <div class="col-sm-4"></div>
-        </div>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-12 col-sm-2">
-                <button class="choice-button" id="playerChoice-paper" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand fa-2x"></i>
-                </button>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-2"></div>
-            <div class="col-12 col-sm-2">
-                <button class="choice-button" id="playerChoice-scissors" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand-scissors fa-2x"></i>
-                </button>
-            </div>
-            <div class="col-sm-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-12 col-sm-2">
-                <button class="choice-button" id="playerChoice-lizard" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand-lizard fa-2x"></i>
-                </button>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="col-12 col-sm-2">
-                <button class="choice-button" id="playerChoice-spock" onclick="handleButtonClick()">
-                    <i class="fa-solid fa-hand-spock fa-2x"></i>
-                </button>
-            </div>
-            <div class="col-sm-3"></div>
-        </div>
-
-
-        <!--computer choice display area-->
-        <div class="row flx-column">
-            <div class="col">
-                <p class="text-center">COMPUTER</p>
-            </div>
-        </div>
-        <!-- </div> -->
-        <!-- <div class="row result flx-row">
-            <div class="win-caret text-center" id="player-win">
-                <i class="hide-at-start fa-solid fa-caret-up"></i>
-            </div>
-            <div class="display-result" class="text-center">WINNER</div>
-            <div class="win-caret text-center" id="player-win">
-                <i class="hide-at-start fa-solid fa-caret-up"></i>
-            </div>
-        </div> -->
-        <div class="row score flx-column">
-            <div class="col score-name text-center">Score</div>
-        </div>
-        <div class="row score-number flx-row">
-            <div class="col score flx-row">
-                <p>Win: </p>
-                <p id="score-won">0</p>
-            </div>
-            <div class="col score flx-row">
-                <p>Draw: </p>
-                <p id="score-drew">0</p>
-            </div>
-            <div class="col score flx-row">
-                <p>Loss: </p>
-                <p id="score-lost">0</p>
-            </div>
-        </div>
-
-        <!-- hide after use -->
-
-        <div class="row text-center">
-            <div class="col" id="player-input-div">
-                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#username">
-                    Play Now
-                </button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button id="reset">RESET</button>
-            </div>
-        </div>
-    </div>
-    <!--Hidden until JS detects click-->
-
-    <!-- <div class="modal-hide">
-                <div class="modal">
-                    <span class="close-img">
-                        <img src="assets/images/close.image.png" alt="Close Icon" id="close-icon" />
-                    </span>
-                    <div class="rules-title">Rules</div>
-                    <div class="rules">
-                        <img src="../assets/images/rulespage.png" alt="rules" />
-                    </div>
-                </div>
-            </div> -->
-    </div>
-    </div>
-
-    <!-- Rules Modal -->
-
-    <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesLabel" aria-hidden="true">
-        <div class="modal-dialog ">
-            <div class="modal-content text-center">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="rulesLabel">Game Rules</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <img src="assets/images/rulespage.png" height="680px" width="320px"
-                        alt="Game Rules for Rock-Paper-Scissors-Lizard-Spock game">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-dark" id="play-game">Play Game</button>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /rulesModal -->
-
-    <!-- Username Modal -->
-
-    <!-- <div class="modal fade" id="username" tabindex="-1" aria-labelledby="usernameLabel" aria-hidden="true">
-        <div class="modal-dialog ">
-            <div class="modal-content text-center">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="usernameLabel">Enter your name to start!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <label for="player-name">
-                        <input type="text" class="align-center" id="player-name" maxlength="8"
-                            placeholder="ENTER YOUR NAME">
-                    </label>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Quit</button>
-                    <button type="button" class="btn btn-dark" id="play-game">Let's Go!</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- /usernameModal -->
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
-    </script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-        -->
     <script src="/assets/js/script.js"></script>
-
-
-
-
+  </div>
 </body>
 
 </html>

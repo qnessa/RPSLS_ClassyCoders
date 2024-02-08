@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* clear defaults*/
+* {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/*Element Styles*/
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*For visibility, remove later*/
+div {
+    border: red 1px solid;
+}
+
+/* Utility Class Styling*/
+.flx-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flx-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hide-at-start {
+    display: none;
+}
+
+/*Main Container and Title*/
+.main-container {
+    height: 90vh;
+    width: 100vw;
+}
+
+.title-block {
+
+    height: 10vh;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.title-block h1 {
+    margin-top: 20px;
+}
+
+
+#play-game {
+    margin: auto;
+}
+
+/*Game area Styles*/
+.game-container {
+    background: url('/assets/images/rulespage.png') no-repeat;
+    background-size: cover;
+}
+
+.btn-container {
+    position: relative;
+    width: 90vw;
+    height: 60vh;
+    margin: auto;
+}
+
+.player-choice {
+    height: 60vh;
+    width: 60px;
+    margin: auto;
+}
+
+
+.choice-button {
+    height: 10vh;
+    width: 60px;
+    font-size: 2em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.choice-button:nth-child(1) {
+    top: 34%;
+  left: 50%;
+  }
+  
+.choice-button:nth-child(2) {
+    top: 58%;
+  left: calc(50% + 100px);
+  }
+  
+.choice-button:nth-child(3) {
+    top: calc(67% + 87px);
+  left: calc(58% + 50px);
+
+  }
+  
+.choice-button:nth-child(4) {
+    top: calc(67% + 87px);
+  left: calc(46% - 50px);
+  }
+  
+.choice-button:nth-child(5) {
+    top: 58%;
+  left: calc(50% - 100px);
+  }
+
+
+/*Results and score area*/
+
+.result {
+    width: 90vw;
+}
+
+.score {
+    width: 90vw;
+    text-align: center;
+}
+
+/*Media Queries*/
+
+/*Smallest screens*/
+@media screen and (max-width:480px) {
+    h1 {
+        font-size: .9em;
+        letter-spacing: .1px;
+    }
+    .player-choice{
+            margin: auto;
+            flex-direction: column;
+        }
+        .main-container{
+            height: 100vh;
+        width: 90vw;
+    }
+    
+    @media screen and (max-width:300px) {
+
+        .choice-button {
+            height: 10vh;
+            width: 15vw;
+            font-size: 1.3em;
+        }
+    }
+
+}
