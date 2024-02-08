@@ -91,8 +91,9 @@
         </div>
     </div>
     <!-- /Play Game -->
+    <!-- End of Mobile -->
 
-
+<!-- Start of large screen devices -->
     <div class="flx-column" id="largeScreen">
         <div class="flx-column">
             <!-- Title-block -->
@@ -179,9 +180,12 @@
                 <br />
 
             </div>
-            <div class="buttons"><button class="rules-btn">Rules</button></div>
+            <div class="rules"><button class="rules-btn">Rules</button></div>
             <br>
-            <button id="reset">RESET</button>
+            <div class="reset">
+                <button id="reset">RESET</button>
+            </div>
+            
             <!--Hidden until JS detects click-->
 
             <!-- <div class="modal-hide">
@@ -209,12 +213,13 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <img src="assets/images/rulespage.png" alt="Game Rules for Rock-Paper-Scissors-Lizard-Spock game">
+                <div class="modal-body text-center">
+                    <img src="assets/images/rulespage.png" height="680px" width="320px"
+                    alt="Game Rules for Rock-Paper-Scissors-Lizard-Spock game">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-dark" id="play-game">Let's Go!</button> -->
+                    
                 </div>
             </div>
         </div>
@@ -223,7 +228,7 @@
 
     <!-- Username Modal -->
 
-    <div class="modal fade" id="username" tabindex="-1" aria-labelledby="usernameLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="username" tabindex="-1" aria-labelledby="usernameLabel" aria-hidden="true">
         <div class="modal-dialog ">
             <div class="modal-content text-center">
                 <div class="modal-header">
@@ -244,7 +249,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- /usernameModal -->
 
