@@ -21,16 +21,18 @@
       <div class="title-block">
         <h1 class="text-center">ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
       </div>
+      <!-- Message Centre -->
       <p id="messageplayer" class="text-center text-uppercase">
         Welcome to our game
       </p>
     </div>
+
+    <!-- Game Rules Modal -->
     <a href="#openModal" class="text-decoration-none" id="openRules">Game Rules</a>
     <br>
 
     <div id="openModal" class="modalDialog">
       <div id="modal">
-        <a href="#close" title="Close" class="close text-decoration-none">X</a>
         <div id="rules">
           <img src="assets/images/rulespage.png" alt="Game Rules" id="modalImage">
           <br>
@@ -38,11 +40,10 @@
         </div>
       </div>
     </div>
-    <!-- player-choice-->
-    
-    <div class="game-container flx-column align-center" id="game-container">
-      
+    <!-- End of Modal -->
 
+    <!-- player-choice-->
+    <div class="game-container flx-column align-center" id="game-container">
       <div class="btn-container flx-row">
 
         <div class="player-choice">
@@ -62,9 +63,10 @@
             <i class="fa-solid fa-hand-spock"></i>
           </button>
         </div>
-
-
       </div>
+      <!-- End of player choice -->
+
+      <!-- Score section -->
       <div class="score flx-column">
         <div class="score-name text-center">Score</div>
         <div class="score-number flx-row">
@@ -82,6 +84,7 @@
           </div>
         </div>
         <br>
+        <!-- Reset game button -->
         <div><button id="reset">Reset</button></div>
       </div>
     </div>

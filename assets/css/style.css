@@ -122,10 +122,6 @@ div {
 	background: -o-linear-gradient(#fff, #fff);
 }
 
-h3 {
-    text-align: center;
-}
-
 .text-decoration-none {
     text-decoration: none;
 }
@@ -134,7 +130,6 @@ h3 {
 #play {
     width: 50%;
     margin: auto;
-    
 }
 
 .btn-container {
@@ -241,6 +236,7 @@ h3 {
     }
 }
 
+/* Small screens */
 @media screen and (max-width:480px) {
     h1 {
         font-size: .9em;
@@ -271,10 +267,8 @@ h3 {
         width: auto;
     }
 
-   
-       
-
 }
+
 
 @media screen and (min-width:481px) {
     h1 {
