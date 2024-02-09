@@ -40,7 +40,7 @@ Game Layout on a larger screen device
 ![Lighthouse test](/assets/images/lighthouse%20test.png)
 
 ## Issues and solutions
-Scores still buggy, would apporoach code in a more linear fashion next time. Throttling function has helped.
+Scores still buggy, would apporoach code in a more linear fashion next time. Throttling function has helped stop extra scores, but makes scores arrive late sometimes.
 
 
 ## Contacts
