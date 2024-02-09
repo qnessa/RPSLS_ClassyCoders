@@ -74,9 +74,9 @@ function getResult() {
 function resetGame() {
   playerChoice = null;
   computerChoice = null;
-  if (result =="win") {scores[0] +=1
-  } else if (result =="draw") {scores[1] +=1}
-  else if (result=="loss") {scores[2] +=1 }
+  if (result ==="win") {scores[0] +=1
+  } else if (result ==="draw") {scores[1] +=1}
+  else if (result==="loss") {scores[2] +=1 }
   result = '';
   document.getElementById('score-won').innerText =scores[0];
   document.getElementById('score-drew').innerText =scores[1];

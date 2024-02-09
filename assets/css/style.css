@@ -20,7 +20,7 @@ body {
 
 /*For visibility, remove later*/
 div {
-    border: red 1px solid;
+    /* border: red 1px solid; */
 }
 
 /* Utility Class Styling*/
@@ -32,6 +32,7 @@ div {
 .flx-row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .align-center {
@@ -71,9 +72,69 @@ div {
 }
 
 /*Game area Styles*/
-.game-container {
-    background: url('/assets/images/rulespage.png') no-repeat;
-    background-size: cover;
+#rules {
+    height: 72vh;
+    width: 70vw;
+    text-align: center;
+   
+}
+
+#openRules {
+    padding-left: 5vw;
+    font-size: 0.8em;
+}
+
+#modalImage {
+    max-height: 100%;
+    max-width: auto;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 70vw;
+	position: relative;
+	margin: 8% auto;
+	padding: 5px 0px 5px 0px;
+	border-radius: 7px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #fff);
+	background: -webkit-linear-gradient(#fff, #fff);
+	background: -o-linear-gradient(#fff, #fff);
+}
+
+h3 {
+    text-align: center;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+
+#play {
+    width: 50%;
+    margin: auto;
+    
 }
 
 .btn-container {
@@ -99,28 +160,28 @@ div {
 }
 
 .choice-button:nth-child(1) {
-    top: 34%;
+    top: calc(34% - 50px);
   left: 50%;
   }
   
 .choice-button:nth-child(2) {
-    top: 58%;
+    top: calc(58% - 50px);
   left: calc(50% + 100px);
   }
   
 .choice-button:nth-child(3) {
-    top: calc(67% + 87px);
-  left: calc(58% + 50px);
+    top: calc(67% + 36px);
+  left: calc(54% + 50px);
 
   }
   
 .choice-button:nth-child(4) {
-    top: calc(67% + 87px);
+    top: calc(67% + 36px);
   left: calc(46% - 50px);
   }
   
 .choice-button:nth-child(5) {
-    top: 58%;
+    top: calc(58% - 50px);
   left: calc(50% - 100px);
   }
 
@@ -139,6 +200,46 @@ div {
 /*Media Queries*/
 
 /*Smallest screens*/
+@media screen and (max-width:300px) {
+
+    .choice-button {
+        height: 12vh;
+        width: 20vw;
+        font-size: 1.3em;
+    }
+
+    .player-choice {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .choice-button {
+        transform: none;
+        position: static;
+        font-size: 2em;
+    }
+
+    #modal {
+        height: 50vh;
+        width: 50vw;
+        margin: 20px 20px;
+        overflow: auto;
+    }
+    #rules {
+    height: 280px;
+    width: auto;
+    
+    }
+
+    .modalDialog > div {
+        width: 50vw;
+        height: 50vh;
+    }
+}
+
 @media screen and (max-width:480px) {
     h1 {
         font-size: .9em;
@@ -152,14 +253,45 @@ div {
             height: 100vh;
         width: 90vw;
     }
-    
-    @media screen and (max-width:300px) {
 
-        .choice-button {
-            height: 10vh;
-            width: 15vw;
-            font-size: 1.3em;
-        }
+    #modal {
+        height: 80vh;
+        width: 80vw;
+        margin: 20px 20px;
+        overflow: auto;
     }
 
+    #modalImage {
+        height: 67vh;
+        width: 70vw;
+    }
+
+    #rules {
+        width: auto;
+    }
+
+   
+       
+
+}
+
+@media screen and (min-width:481px) {
+    h1 {
+        font-size: 1.2em;
+        letter-spacing: .1px;
+    }
+
+    #rules {
+        height: 500px;
+        width: auto;
+        
+        
+    }
+
+    .modalDialog > div {
+        width: 400px;
+        height: auto;
+    }
+
+    
 }
