@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {});
 
 function handleButtonClick() {
   document.getElementById('play').addEventListener("click", function () {
-    console.log("Start button clicked")
+    document.getElementById('openModal').style.display = "none";
   });
   document.getElementById('reset').addEventListener("click", function () {
-    location.reload()
+  location.reload()
   });
   playerChoiceIds.forEach(function (playerChoice) {
     playerChoiceId = document.getElementById(playerChoice);
