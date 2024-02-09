@@ -69,6 +69,28 @@ We created issues on Github for user stories and added the to Github Projects fo
 
 ![Responsivity](/assets/images/amIresponsive.png)
 
+Web app is fully responsive across all screen sizes. 
+
+![iphoneChrome](/assets/images/Iphone-chrome.png)
+
+![iphoneSafari](/assets/images/iphone-safari.png)
+
+Web app was tested on iphone mobile device on 2 separate browsers, fully operational on both. One thing we realised is that the link styling on mobile devices is present in all the buttons which we would remove in future iterations so it is consistent with laptop browsers. 
+
+![gamePlay](/assets/images/gameplay1.png)
+
+All buttons are tested to see if fully functional at all times. We found that the score tracking presents some delays, it would initially pick up the score but then delay a turn, so each score update is a turn behind the actualy live gameplay. From our understanding, since the Javascript was not linear, functions were running ahead of clickEvents so while waiting for the clickEvent, the score function was getting held up and caused a backlog and hence a delay in the update.
+
+![gameRules](/assets/images/gameRules.png)
+
+We used pure HTML and CSS to create the modal since we removed Bootstrap, however after testing we realised that the gameRules button only works on the first click, that is because it takes us to the rules page which is a separate page (like what a Navbar does), it then hides display when closed so there is no way of opening it again without reloading the page. We could have made the play button go back to 'Home' if we realised this sooner. 
+
+![resetGame](/assets/images/resetgame.png)
+
+The reset button refreshes the whole page, and if you have opened the rules before, this will return the page with the rules already loaded up.
+
+
+
 ## Issues and solutions
 Scores still buggy, would apporoach code in a more linear fashion next time. Throttling function has helped stop extra scores, but makes scores arrive late sometimes.
 
