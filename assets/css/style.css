@@ -294,5 +294,9 @@ h3 {
         height: auto;
     }
 
+    #modalImage {
+        max-height: 90%;
+    }
+
     
 }
