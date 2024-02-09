@@ -71,9 +71,9 @@ We created issues on Github for user stories and added the to Github Projects fo
 
 Web app is fully responsive across all screen sizes. 
 
-![iphoneChrome](/assets/images/Iphone-chrome.png)
+<img src="assets/images/Iphone-chrome.png" width="260" height="420">
 
-![iphoneSafari](/assets/images/iphone-safari.png)
+<img src="assets/images/iphone-safari.png" width="260" height="420">
 
 Web app was tested on iphone mobile device on 2 separate browsers, fully operational on both. One thing we realised is that the link styling on mobile devices is present in all the buttons which we would remove in future iterations so it is consistent with laptop browsers. 
 
@@ -100,12 +100,13 @@ Scores still buggy, would apporoach code in a more linear fashion next time. Thr
 
 
 ## Acknowledgements
-Webdesignerdepot for creating a modal without the use of bootstrap, just pure HTML and CSS. Reference link: https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ <br>
-Font Awesome for the icons used in this project.
-Thanks to, Coffee, Midnight Oil and Refusal to Give Up!
-
-## Credits
+- Webdesignerdepot for creating a modal without the use of bootstrap, just pure HTML and CSS. Reference link: https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ 
 - Google and Stack Overflow for research and problem solving
 - Chat GPT for code checking and solution suggestions
-- Function Throttling function from- https://codedamn.com/news/javascript/throttling-in-javascript
+- Function Throttling function from- https://codedamn.com/news/javascript/throttling-in-javascript<br>
+Font Awesome for the icons used in this project. <br>
+Thanks to, Coffee, Midnight Oil and Refusal to Give Up!
+
+
+
 
