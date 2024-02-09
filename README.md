@@ -12,31 +12,39 @@
 7. Bootstrap v4.6 (No longer using)
 
 ## Wireframes
-![game rules](/assets/images/rulespage.png)
+<img src="assets/images/rulespage.png" width="300" height="400">
 
 Game Rules made using Font Awesome Icons
 
-![mobile landing page](/assets/images/section%201%20mobile.png)
+<img src="assets/images/section 1 mobile.png" width="280" height="420">
 
 Starting page when visiting on a mobile device
 
-![desktop landing page](/assets/images/section%201%20desktop.png)
+<img src="assets/images/section 1 desktop.png" width="600" height="420">
+
 
 Starting page when visiting on a larger screen device
 
-![mobile game layout](/assets/images/section%202%20mobile.png)
+<img src="assets/images/section 2 mobile.png" width="280" height="420">
+
 
 Game layout on a mobile device
 
-![desktop game layout](/assets/images/section%202%20desktop.png)
+<img src="assets/images/section 2 desktop.png" width="600" height="420">
+
 
 Game Layout on a larger screen device
 
 
 ## Testing
+![Lighthouse test](/assets/images/lighthouse%20test.png)
 
 ## Issues and solutions
 
+
+
 ## Contacts
+
+
 
 ## Acknowledgements

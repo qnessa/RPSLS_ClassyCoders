@@ -19,11 +19,6 @@ body {
     background-color: snow;
 }
 
-/*For visibility, remove later*/
-div {
-    /* border: red 1px solid; */
-}
-
 /* Utility Class Styling*/
 .flx-column {
     display: flex;
@@ -296,5 +291,54 @@ button {
         max-height: 90%;
     }
 
+    
+}
+
+@media screen and (min-width:1000px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      #messageplayer {
+        font-size: 2em;
+      }
+
+      #openRules {
+        font-size: 1.3em;
+      }
+
+      .score {
+        font-size: 1.2em;
+      }
+
+      .choice-button:nth-child(1) {
+        top: calc(40% - 100px);
+      
+      }
+      
+    .choice-button:nth-child(2) {
+        top: calc(58% - 100px);
+      left: calc(50% + 100px);
+      }
+      
+    .choice-button:nth-child(3) {
+        top: calc(67% - 14px);
+      
+    
+      }
+      
+    .choice-button:nth-child(4) {
+        top: calc(67% - 14px);
+      
+      }
+      
+    .choice-button:nth-child(5) {
+        top: calc(58% - 100px);
+    
+      }
+
+      .btn-container {
+        height: 55vh;
+      }
     
 }
