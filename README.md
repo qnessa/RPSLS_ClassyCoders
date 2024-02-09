@@ -40,7 +40,7 @@ Game Layout on a larger screen device
 ![Lighthouse test](/assets/images/lighthouse%20test.png)
 
 ## Issues and solutions
-
+Scores still buggy, would apporoach code in a more linear fashion next time. Throttling function has helped.
 
 
 ## Contacts
@@ -48,3 +48,9 @@ Game Layout on a larger screen device
 
 
 ## Acknowledgements
+
+## Credits
+
+- Google and Stack Overflow for research and problem solving
+- Chat GPT for code checking and solution suggestions
+- Function Throttling function from- https://codedamn.com/news/javascript/throttling-in-javascript
