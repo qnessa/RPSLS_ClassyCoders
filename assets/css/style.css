@@ -171,13 +171,13 @@ button {
   
 .choice-button:nth-child(3) {
     top: calc(67% + 36px);
-  left: calc(54% + 50px);
+  left: calc(51% + 50px);
 
   }
   
 .choice-button:nth-child(4) {
     top: calc(67% + 36px);
-  left: calc(46% - 50px);
+  left: calc(49% - 50px);
   }
   
 .choice-button:nth-child(5) {
