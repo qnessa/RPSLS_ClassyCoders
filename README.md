@@ -49,6 +49,8 @@ Scores still buggy, would apporoach code in a more linear fashion next time. Thr
 
 ## Acknowledgements
 
+Thanks to, Coffee, Midnight Oil and Refusal to Give Up!
+
 ## Credits
 
 - Google and Stack Overflow for research and problem solving
