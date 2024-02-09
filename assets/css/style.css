@@ -16,6 +16,7 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    background-color: snow;
 }
 
 /*For visibility, remove later*/
@@ -66,6 +67,9 @@ div {
     margin-top: 20px;
 }
 
+button {
+    background-color: snow;
+}
 
 #play-game {
     margin: auto;
