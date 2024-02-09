@@ -55,19 +55,19 @@ function getComputerTurn(roundEnded) {
 function getResult(roundEnded) {
 
   if (playerTurn === computerTurn) {
-    messagePlayer.innerText = "It's a draw";
+    messagePlayer.innerText = "It's a draw".toUpperCase();
     result = "draw"
   } else if ((playerTurn === 'rock' && (computerTurn === 'scissors' || computerTurn === 'lizard')) ||
     (playerTurn === 'paper' && (computerTurn === 'rock' || computerTurn === 'spock')) ||
     (playerTurn === 'scissors' && (computerTurn === 'paper' || computerTurn === 'lizard')) ||
     (playerTurn === 'lizard' && (computerTurn === 'spock' || computerTurn === 'paper')) ||
     (playerTurn === 'spock' && (computerTurn === 'scissors' || computerTurn === 'rock'))) {
-    messagePlayer.innerText = `You Win, ${playerTurn} beats ${computerTurn}`;
+    messagePlayer.innerText = `You Win, ${playerTurn} beats ${computerTurn}`.toUpperCase();
     result = "win"
   } else if (playerTurn == false || computerTurn == false) {
-    messagePlayer.innerText = "Make your Choice below"
+    messagePlayer.innerText = "Make your Choice below".toUpperCase()
   } else {
-    messagePlayer.innerText = `You Lose, ${computerTurn} beats ${playerTurn}`;
+    messagePlayer.innerText = `You Lose, ${computerTurn} beats ${playerTurn}`.toUpperCase();
     result = "loss"
   }
 
