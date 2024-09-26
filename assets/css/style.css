@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* clear defaults*/
+* {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+*:focus {
+    color: black;
+}
+/*Element Styles*/
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: snow;
+}
+
+/* Utility Class Styling*/
+.flx-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flx-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*Main Container and Title*/
+.main-container {
+    height: 90vh;
+    width: 100vw;
+}
+
+.title-block {
+    height: 10vh;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.title-block h1 {
+    margin-top: 20px;
+}
+
+#play-game {
+    margin: auto;
+}
+
+/*Game area Styles*/
+#rules {
+    height: 72vh;
+    width: 70vw;
+    text-align: center;
+}
+
+button {
+    background-color: snow;
+}
+
+#openRules {
+    padding-left: 5vw;
+    font-size: 0.8em;
+}
+
+#modalImage {
+    max-height: 100%;
+    max-width: auto;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog>div {
+    width: 70vw;
+    position: relative;
+    margin: 8% auto;
+    padding: 5px 0px 5px 0px;
+    border-radius: 7px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #fff);
+    background: -webkit-linear-gradient(#fff, #fff);
+    background: -o-linear-gradient(#fff, #fff);
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+#play {
+    width: 50%;
+    margin: auto;
+}
+
+/* Container for the button area */
+.btn-container {
+    position: relative;
+    width: 90vw;
+    height: 60vh;
+    margin: auto;
+}
+
+.player-choice {
+    height: 60vh;
+    width: 60px;
+    margin: auto;
+}
+
+/* Button Choices Styling */
+.choice-button {
+    height: 10vh;
+    width: 60px;
+    font-size: 2em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* Button layout */
+.choice-button:nth-child(1) {
+    top: calc(34% - 50px);
+    left: 50%;
+}
+
+.choice-button:nth-child(2) {
+    top: calc(58% - 50px);
+    left: calc(50% + 100px);
+}
+
+.choice-button:nth-child(3) {
+    top: calc(67% + 36px);
+    left: calc(51% + 50px);
+
+}
+
+.choice-button:nth-child(4) {
+    top: calc(67% + 36px);
+    left: calc(49% - 50px);
+}
+
+.choice-button:nth-child(5) {
+    top: calc(58% - 50px);
+    left: calc(50% - 100px);
+}
+
+
+/*Results and score area*/
+.result {
+    width: 90vw;
+}
+
+.score {
+    width: 90vw;
+    text-align: center;
+}
+
+/*Media Queries*/
+
+/*Smallest screens*/
+@media screen and (max-width:300px) {
+
+    .choice-button {
+        height: 12vh;
+        width: 20vw;
+        font-size: 1.3em;
+    }
+
+    .player-choice {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .choice-button {
+        transform: none;
+        position: static;
+        font-size: 2em;
+    }
+
+    #modal {
+        height: 50vh;
+        width: 50vw;
+        margin: 20px 20px;
+        overflow: auto;
+    }
+
+    #rules {
+        height: 280px;
+        width: auto;
+
+    }
+
+    .modalDialog>div {
+        width: 50vw;
+        height: 50vh;
+    }
+}
+
+/* Small screens */
+@media screen and (max-width:480px) {
+    h1 {
+        font-size: 1em;
+        letter-spacing: .1px;
+    }
+
+    .player-choice {
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .main-container {
+        height: 100vh;
+        width: 90vw;
+    }
+
+    #modal {
+        height: 80vh;
+        width: 80vw;
+        margin: 20px 20px;
+        overflow: auto;
+    }
+
+    #modalImage {
+        height: 67vh;
+        width: 70vw;
+    }
+
+    #rules {
+        width: auto;
+    }
+
+    /* Updated button layout */
+    .choice-button:nth-child(1) {
+        top: calc(42% - 50px);
+    }
+
+}
+
+/* Medium Screens */
+@media screen and (min-width:481px) {
+    h1 {
+        font-size: 1.4em;
+        letter-spacing: .1px;
+    }
+
+    #messageplayer {
+        font-size: 1.2em;
+    }
+
+    #openRules {
+        font-size: 1.1em;
+    }
+
+    #rules {
+        height: 500px;
+        width: auto;
+    }
+
+    .modalDialog>div {
+        width: 400px;
+        height: auto;
+    }
+
+    #modalImage {
+        max-height: 90%;
+    }
+
+    /* Updated button layout */
+    .choice-button:nth-child(1) {
+        top: calc(40% - 100px);
+    }
+
+    .choice-button:nth-child(2) {
+        top: calc(58% - 100px);
+        left: calc(50% + 100px);
+    }
+
+    .choice-button:nth-child(3) {
+        top: calc(67% - 14px);
+    }
+
+    .choice-button:nth-child(4) {
+        top: calc(67% - 14px);
+    }
+
+    .choice-button:nth-child(5) {
+        top: calc(58% - 100px);
+    }
+
+    .btn-container {
+        height: 55vh;
+    }
+
+
+}
+
+/* Large screens */
+
+@media screen and (min-width:1000px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #messageplayer {
+        font-size: 2em;
+    }
+
+    #openRules {
+        font-size: 1.3em;
+    }
+
+    .score {
+        font-size: 1.2em;
+    }
+
+    /* Updated button layout */
+    .choice-button:nth-child(1) {
+        top: calc(40% - 100px);
+    }
+
+    .choice-button:nth-child(2) {
+        top: calc(58% - 100px);
+        left: calc(50% + 100px);
+    }
+
+    .choice-button:nth-child(3) {
+        top: calc(67% - 14px);
+    }
+
+    .choice-button:nth-child(4) {
+        top: calc(67% - 14px);
+    }
+
+    .choice-button:nth-child(5) {
+        top: calc(58% - 100px);
+    }
+
+    .btn-container {
+        height: 55vh;
+    }
+
+}

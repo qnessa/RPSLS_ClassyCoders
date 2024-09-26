@@ -1,89 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"content="RPSLS_ClassyCoders. Website for game lovers who are looking to play Rock,Paper,Scissors,Lizard,Spock Game."
-    <meta name="keywords"content="Rock-paper-scissors-lizard-spoke-game">
-    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png">
-    <script src="https://kit.fontawesome.com/5e4aba3606.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>RPSLS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="RPSLS_ClassyCoders. Website for game lovers who are looking to play Rock,Paper,Scissors,Lizard,Spock Game." />
+
+  <meta name="keywords" content="Rock-paper-scissors-lizard-spoke-game" />
+  <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" />
+  <script src="https://kit.fontawesome.com/5e4aba3606.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>RPSLS</title>
 </head>
+
 <body>
-<div class="main-container flx-column">
+  <div class="main-container flx-column">
     <div class="container flx-column">
-    <!-- Title-block -->
+      <!-- Title-block -->
       <div class="title-block">
-        <h1>ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
+        <h1 class="text-center">ROCK-PAPER-SCISSORS-LIZARD-SPOCK</h1>
+      </div>
+      <!-- Message Centre -->
+      <p id="messageplayer" class="text-center text-uppercase">
+        Welcome to our game
+      </p>
+    </div>
+
+    <!-- Game Rules Modal -->
+    <a href="#openModal" class="text-decoration-none" id="openRules">Game Rules</a>
+    <br>
+
+    <div id="openModal" class="modalDialog">
+      <div id="modal">
+        <div id="rules">
+          <img src="assets/images/rulespage.png" alt="Game Rules" id="modalImage">
+          <br>
+          <button id="play">Play</button>
+        </div>
       </div>
     </div>
+    <!-- End of Modal -->
+
     <!-- player-choice-->
-    <div class="game-container flx colum"
-    <div class="player-choice"> 
-        <button class="my-button" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand-back-fist"></i></button>
-        <button class="my-button" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand-spock"></i></button>
-        <button class="my-button" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand"></i></button>
-        <button class="my-button" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand-scissors"></i></button>
-        <button class="my-button" onclick="handleButtonClick()">
-        <i class="fa-solid fa-hand-lizard"></i></button>
-    </div>
-    <div class="chosen-main icone flx-row hidden">
-        <div class="chosen icon flx-column">
-            <p id ="player-turn">PLAYER</p>
-            <div class="player-turn"></div>
+    <div class="game-container flx-column align-center" id="game-container">
+      <div class="btn-container flx-row">
+
+        <div class="player-choice">
+          <button class="choice-button" id="playerChoice-rock" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand-back-fist"></i>
+          </button>
+          <button class="choice-button" id="playerChoice-paper" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand"></i>
+          </button>
+          <button class="choice-button" id="playerChoice-scissors" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand-scissors"></i>
+          </button>
+          <button class="choice-button" id="playerChoice-lizard" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand-lizard"></i>
+          </button>
+          <button class="choice-button" id="playerChoice-spock" onclick="handleButtonClick()">
+            <i class="fa-solid fa-hand-spock"></i>
+          </button>
         </div>
-        <div class="chosen icon flx-column">
-            <p id="player-choice"></p>
-            <div class="player-choice"></div>
+      </div>
+      <!-- End of player choice -->
+
+      <!-- Score section -->
+      <div class="score flx-column">
+        <div class="text-center">Score</div>
+        <div class="flx-row">
+          <div class="score flx-row">
+            <p>Win:</p>
+            <p id="score-won">0</p>
+          </div>
+          <div class="score flx-row">
+            <p>Draw:</p>
+            <p id="score-drew">0</p>
+          </div>
+          <div class="score flx-row">
+            <p>Loss:</p>
+            <p id="score-lost">0</p>
+          </div>
         </div>
-        <div class="chosen icon flx-column">
-            <p id="computer-turn">COMPUTER</p>
-            <div class="computer-choice"></div>
-        </div>
-        <div class="result">
-            <div class="display-result">WINNER</div>
-        <!-- Add a line break to move the button to the next line -->
         <br>
-            <button>RESET</button>     
-        </div>
-    <div class="score flx-column">
-        <div class="score-name">Score</div>
-        <div class="score-number">0</div>
+        <!-- Reset game button -->
+        <div><button id="reset">Reset</button></div>
+      </div>
     </div>
-</div> 
-<div><label for="player-name"></label>
-    <input type="text" id="player-name" placeholder="ENTER YOUR NAME TO BEGIN">
-    <!-- Add a line break to move the button to the next line -->
-    <br>
-    <button id="play-game">Play</button>
-</div>
-<div>
-<button class="rules-btn">Rules
-    <div class="modal-behind"></div>
-    <div class="modal">
-        <span class="close-img">
-        <img src="assets/images/close.image.png" alt="Close Icon" id="close-icon">
-        </span>
-    <div class="rules-title">Rules</div>
-    <div class="rules">
-        <img src="assets/images/rules page(1).png" alt="rules">
-    </div>
-    </div>
-</button>
-</div> 
-</div>    
-<script src="assets/js/script.js"></script>   
-</div>
+
+    <script src="assets/js/script.js"></script>
+  </div>
 </body>
-</html>
 
-
-
-    <script src="script.js"></script>
-</body>
 </html>
